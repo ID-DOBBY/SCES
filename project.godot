@@ -14,6 +14,25 @@ config/name="SCES"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [dotnet]
 
 project/assembly_name="SCES"
+
+[file_customization]
+
+folder_colors={
+"res://Assets/": "teal",
+"res://Scenes/": "yellow",
+"res://Scripts/": "red"
+}
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
