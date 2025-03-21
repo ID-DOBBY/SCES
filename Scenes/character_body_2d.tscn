@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bl8aso4onfj6c"]
+
+[ext_resource type="Script" uid="uid://dp8ifwbftb7vk" path="res://Scripts/Player.cs" id="1_88kja"]
+[ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/Placeholder_dude.png" id="1_ymxaj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
+radius = 22.0
+height = 128.0
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(967, 463)
+scale = Vector2(2, 2)
+script = ExtResource("1_88kja")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-2, -7)
+scale = Vector2(5, 5)
+texture = ExtResource("1_ymxaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, -12.5)
+shape = SubResource("CapsuleShape2D_88kja")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -2.5)
