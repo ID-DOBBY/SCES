@@ -1,25 +1,74 @@
-[gd_scene load_steps=4 format=3 uid="uid://bl8aso4onfj6c"]
+[gd_scene load_steps=11 format=3 uid="uid://bl8aso4onfj6c"]
 
 [ext_resource type="Script" uid="uid://dp8ifwbftb7vk" path="res://Scripts/Player.cs" id="1_88kja"]
 [ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/Placeholder_dude.png" id="1_ymxaj"]
+[ext_resource type="Script" uid="uid://dolsjl64wwadx" path="res://Scripts/Camera2d.cs" id="3_it8n0"]
+[ext_resource type="Texture2D" uid="uid://b2piexvs52wkw" path="res://Assets/Sprites/Placeholder_dude_frame1.png" id="4_t38ji"]
+[ext_resource type="Texture2D" uid="uid://rml6dupery65" path="res://Assets/Sprites/Placeholder_dude_frame2.png" id="5_pbj7x"]
+[ext_resource type="Texture2D" uid="uid://dw24if4qun0fm" path="res://Assets/Sprites/Placeholder_dude_frame3.png" id="6_fxof2"]
+[ext_resource type="Texture2D" uid="uid://dwlg06ja08dch" path="res://Assets/Sprites/Placeholder_dude_upframe1.png" id="7_fxof2"]
+[ext_resource type="Texture2D" uid="uid://cc8276jnfese4" path="res://Assets/Sprites/Placeholder_dude_upframe2.png" id="8_601d1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
 radius = 22.0
 height = 128.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_601d1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ymxaj")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_t38ji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pbj7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_fxof2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pbj7x")
+}],
+"loop": true,
+"name": &"WalkingSide",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_fxof2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_601d1")
+}],
+"loop": true,
+"name": &"WalkingUp",
+"speed": 3.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(967, 463)
 scale = Vector2(2, 2)
 script = ExtResource("1_88kja")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-2, -7)
-scale = Vector2(5, 5)
-texture = ExtResource("1_ymxaj")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(-2, -12.5)
 shape = SubResource("CapsuleShape2D_88kja")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -2.5)
+script = ExtResource("3_it8n0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -0.5)
+scale = Vector2(5, 5)
+sprite_frames = SubResource("SpriteFrames_601d1")
+animation = &"WalkingUp"
+frame_progress = 0.432255
