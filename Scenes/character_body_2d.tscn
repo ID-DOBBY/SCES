@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bl8aso4onfj6c"]
+[gd_scene load_steps=11 format=3 uid="uid://31onwrq5hswc"]
 
 [ext_resource type="Script" uid="uid://dp8ifwbftb7vk" path="res://Scripts/Player.cs" id="1_88kja"]
 [ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/Placeholder_dude.png" id="1_ymxaj"]
@@ -71,4 +71,4 @@ position = Vector2(0, -0.5)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_601d1")
 animation = &"WalkingUp"
-frame_progress = 0.432255
+frame_progress = 0.182148
