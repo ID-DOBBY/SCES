@@ -52,7 +52,7 @@ animations = [{
 "speed": 3.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D"]
 position = Vector2(967, 463)
 scale = Vector2(2, 2)
 script = ExtResource("1_88kja")
