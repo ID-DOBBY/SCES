@@ -10,11 +10,11 @@ public partial class Player : CharacterBody2D
 	float dy = 0f; //Velocity Y Axis
 	
 	float amax = 20f;//Max acceleration
-	float aspeed = 5f; //How fast the player accelerates
-	float dmax = 350f;//Max Velocity
-	float resistance = -35f; //How fast the player decelerates
-	bool moveUp = false; //Leave false
-	bool moveSide = false; //Leave false
+	float aspeed = 6f; //How fast the player accelerates
+	float dmax = 400f;//Max Velocity
+	float resistance = -32f; //How fast the player decelerates
+	int moveUp = 0; //Leave 0
+	int moveSide = 0; //Leave 0
 	private AnimatedSprite2D _animatedSprite;
 	public override void _Ready()
 	{
@@ -25,26 +25,27 @@ public partial class Player : CharacterBody2D
 	{
 		if(Input.IsActionPressed("ch_right") || Input.IsActionPressed("ch_left"))
 		{
-			moveSide = true;
 			if(Input.IsActionPressed("ch_right") && Input.IsActionPressed("ch_left"))
 			{
 				_animatedSprite.Play("Idle");
-				moveSide = false;
+				moveSide = 0;
 			}
 			else if (Input.IsActionPressed("ch_right"))
 			{
+				moveSide = 1;
 				_animatedSprite.Play("WalkingSide");
 				_animatedSprite.FlipH = false;
-				if(ax <= 10)
+				if(ax <= amax)
 				{
 					ax = ax + aspeed;
 				}
 			}
 			else if (Input.IsActionPressed("ch_left"))
 			{
+				moveSide = -1;
 				_animatedSprite.Play("WalkingSide");
 				_animatedSprite.FlipH = true;
-				if(ax >= -10)
+				if(ax >= -amax)
 				{
 					ax = ax - aspeed;
 				}
@@ -52,35 +53,36 @@ public partial class Player : CharacterBody2D
 		}
 		else
 		{
-			moveSide = false;
+			moveSide = 0;
 		}
 		
 		if(Input.IsActionPressed("ch_down") || Input.IsActionPressed("ch_up"))
 		{
-			moveUp = true;
 			if(Input.IsActionPressed("ch_down") && Input.IsActionPressed("ch_up"))
 			{
 				_animatedSprite.Play("Idle");
-				moveUp = false;
+				moveUp = 0;
 			}
 			if(Input.IsActionPressed("ch_down"))
 			{
-				if(moveSide == false)
+				moveUp = -1;
+				if(moveSide == 0)
 				{
 				_animatedSprite.Play("WalkingUp");
 				}
-				if(ay <= 10)
+				if(ay <= amax)
 				{
 					ay = ay + aspeed;
 				}
 			}
 			else if(Input.IsActionPressed("ch_up"))
 			{
-				if(moveSide == false)
+				moveUp = 1;
+				if(moveSide == 0)
 				{
 				_animatedSprite.Play("WalkingUp");
 				}
-				if(ay >= -10)
+				if(ay >= -amax)
 				{
 					ay = ay - aspeed;
 				}
@@ -88,10 +90,10 @@ public partial class Player : CharacterBody2D
 		}
 		else
 		{
-			moveUp = false;
+			moveUp = 0;
 		}
 		
-		if(moveUp == false && moveSide == false)
+		if(moveUp == 0 && moveSide == 0)
 		{
 			_animatedSprite.Play("Idle");
 		}
@@ -99,56 +101,82 @@ public partial class Player : CharacterBody2D
 	
 	public void CalcMovement()
 	{
-		/*
-		if((dx+dy) >= dmax || (-dx-dy) >= dmax || (dx-dy) >= dmax || (-dx+dy) >= dmax)
+		if(moveSide != 0 && moveUp != 0)
 		{
-			if(dx < 0)
+			if(dx>(dmax/2) || dx<(-dmax/2))
 			{
-				if (ax > 0)
+				if(dx>(dmax/2))
 				{
-					dx = dx+ax;
+					dy = (dx/2)*-moveUp;
+					dx = dmax/2;
 				}
-			}
-			else if (dx > 0)
-			{
-				if (ax < 0)
+				if(dx<(-dmax/2))
 				{
-					dx = dx+ax;
+					dy = (dx/2)*moveUp;
+					dx = -dmax/2;
 				}
 			}
 			
-			if(dy < 0)
+			if(dy>(dmax/2) || dy<(-dmax/2))
 			{
-				if (ay > 0)
+				if(dy>(dmax/2))
 				{
-					dy = dy+ay;
+					dx = (dy/2)*moveSide;
+					dy = dmax/2;
+				}
+				if(dy<(-dmax/2))
+				{
+					dx = (dy/2)*-moveSide;
+					dy = -dmax/2;
 				}
 			}
-			else if (dy > 0)
+			
+			if((dx+ax) <= (dmax/2) && (dx+ax) >= (-dmax/2))
 			{
-				if (ay < 0)
-				{
-					dy = dy+ay;
-				}
+				dx = dx+ax;
+			}
+			if((dy+ay) <= (dmax/2) && (dy+ay) >= (-dmax/2))
+			{
+				dy = dy+ay;
 			}
 		}
-		
 		else
 		{
-		*/
 			if((dx+ax) <= dmax && (dx+ax) >= (-dmax))
 			{
 				dx = dx+ax;
+			}
+			else if (dx < dmax && dx > -dmax)
+			{
+				if(dx>0)
+				{
+					dx = dmax;
+				}
+				if(dx<0)
+				{
+					dx = -dmax;
+				}
 			}
 			if((dy+ay) <= dmax && (dy+ay) >= (-dmax))
 			{
 				dy = dy+ay;
 			}
-		//}
+			else if (dy < dmax && dy > -dmax)
+			{
+				if(dy>0)
+				{
+					dy = dmax;
+				}
+				if(dy<0)
+				{
+					dy = -dmax;
+				}
+			}
+		}
 		
 		if ((dx != 0) || (dy != 0))
 		{
-			if (moveUp == false)
+			if (moveUp == 0)
 			{
 				if(dy == 0)
 				{
@@ -184,7 +212,7 @@ public partial class Player : CharacterBody2D
 				}
 			}
 			
-			if(moveSide == false)
+			if(moveSide == 0)
 			{
 				if(dx == 0)
 				{
