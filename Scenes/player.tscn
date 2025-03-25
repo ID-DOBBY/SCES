@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://31onwrq5hswc"]
+[gd_scene load_steps=13 format=3 uid="uid://31onwrq5hswc"]
 
 [ext_resource type="Script" uid="uid://dp8ifwbftb7vk" path="res://Scripts/Player.cs" id="1_88kja"]
 [ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/Placeholder_dude.png" id="1_ymxaj"]
@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dw24if4qun0fm" path="res://Assets/Sprites/Placeholder_dude_frame3.png" id="6_fxof2"]
 [ext_resource type="Texture2D" uid="uid://dwlg06ja08dch" path="res://Assets/Sprites/Placeholder_dude_upframe1.png" id="7_fxof2"]
 [ext_resource type="Texture2D" uid="uid://cc8276jnfese4" path="res://Assets/Sprites/Placeholder_dude_upframe2.png" id="8_601d1"]
+[ext_resource type="Script" uid="uid://bxm1il7yoxmpy" path="res://Scenes/GunPivot.cs" id="9_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://ba2lkwdio5myd" path="res://Assets/Sprites/AK.png" id="10_gymyn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
 radius = 22.0
@@ -72,3 +74,12 @@ scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_601d1")
 animation = &"WalkingUp"
 frame_progress = 0.182148
+
+[node name="GunPivot" type="Node2D" parent="."]
+position = Vector2(0, -0.5)
+script = ExtResource("9_tx1dd")
+
+[node name="Sprite2D" type="Sprite2D" parent="GunPivot"]
+position = Vector2(68, -0.5)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_gymyn")

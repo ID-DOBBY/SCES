@@ -3,28 +3,28 @@ using Godot;
 public partial class Player : CharacterBody2D
 {
 	
-	float ax = 0f; //Acceleration X axis
-	float dx = 0f; //Velocity X axis
+	[Export] float ax = 0f; //Acceleration X axis
+	[Export] float dx = 0f; //Velocity X axis
 	
-	float ay = 0f; //Acceleration Y axis
-	float dy = 0f; //Velocity Y Axis
+	[Export] float ay = 0f; //Acceleration Y axis
+	[Export] float dy = 0f; //Velocity Y Axis
 	
-	float amax = 20f;//Max acceleration
-	float aspeed = 6f; //How fast the player accelerates
-	float dmax = 380f;//Max Velocity
-	float resistance = -32f; //How fast the player decelerates
-	int moveUp = 0; //Leave 0
-	int moveSide = 0; //Leave 0
-	float extraTwoAxisSpeed = 110f; // Extra speed given when going up/down and to the side   IT IS HALVED SO PUT DOUBLE THE NUMBER YOU WANT
+	[Export] float amax = 20f;//Max acceleration
+	[Export] float aspeed = 6f; //How fast the player accelerates
+	[Export] float dmax = 380f;//Max Velocity
+	[Export] float resistance = -32f; //How fast the player decelerates
+	[Export] int moveUp = 0; //Leave 0
+	[Export] int moveSide = 0; //Leave 0
+	[Export] float extraTwoAxisSpeed = 110f; // Extra speed given when going up/down and to the side   IT IS HALVED SO PUT DOUBLE THE NUMBER YOU WANT
 	private AnimatedSprite2D _animatedSprite;
-	public override void _Ready()
+	 public override void _Ready()
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 	
 	public void GetInput() //Getting input and handling animations
 	{
-		if(Input.IsActionPressed("ch_right") || Input.IsActionPressed("ch_left"))
+		if(Input.IsActionPressed("ch_right") || Input.IsActionPressed("ch_left")) //Handling side to side
 		{
 			if(Input.IsActionPressed("ch_right") && Input.IsActionPressed("ch_left"))
 			{
@@ -57,7 +57,7 @@ public partial class Player : CharacterBody2D
 			moveSide = 0;
 		}
 		
-		if(Input.IsActionPressed("ch_down") || Input.IsActionPressed("ch_up"))
+		if(Input.IsActionPressed("ch_down") || Input.IsActionPressed("ch_up")) //Handling up/down
 		{
 			if(Input.IsActionPressed("ch_down") && Input.IsActionPressed("ch_up"))
 			{
@@ -102,7 +102,7 @@ public partial class Player : CharacterBody2D
 	
 	public void CalcMovement() //Handling movement physics 
 	{
-		if(moveSide != 0 && moveUp != 0)
+		if(moveSide != 0 && moveUp != 0) //If W/S and A/D is being pressed at the same time
 		{
 			if(dx>((dmax+extraTwoAxisSpeed)/2) || dx<((-dmax-extraTwoAxisSpeed)/2))
 			{
@@ -163,7 +163,7 @@ public partial class Player : CharacterBody2D
 				}
 			}
 		}
-		else
+		else //If only one movement direction is being done or if none are being pressed
 		{
 			if((dx+ax) <= dmax && (dx+ax) >= (-dmax))
 			{
@@ -274,7 +274,7 @@ public partial class Player : CharacterBody2D
 		
 		Vector2 velocity = Vector2.Zero;
 		velocity = new Vector2(dx, dy);
-		GD.Print("velocity: "+ velocity);
+		GD.Print("velocity: "+ velocity); //Just used to debug
 		Velocity = velocity;
 	}
 	public override void _PhysicsProcess(double delta)
