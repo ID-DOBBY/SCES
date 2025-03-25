@@ -11,17 +11,18 @@ public partial class Player : CharacterBody2D
 	
 	float amax = 20f;//Max acceleration
 	float aspeed = 6f; //How fast the player accelerates
-	float dmax = 400f;//Max Velocity
+	float dmax = 380f;//Max Velocity
 	float resistance = -32f; //How fast the player decelerates
 	int moveUp = 0; //Leave 0
 	int moveSide = 0; //Leave 0
+	float extraTwoAxisSpeed = 110f; // Extra speed given when going up/down and to the side   IT IS HALVED SO PUT DOUBLE THE NUMBER YOU WANT
 	private AnimatedSprite2D _animatedSprite;
 	public override void _Ready()
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 	
-	public void GetInput()
+	public void GetInput() //Getting input and handling animations
 	{
 		if(Input.IsActionPressed("ch_right") || Input.IsActionPressed("ch_left"))
 		{
@@ -99,45 +100,67 @@ public partial class Player : CharacterBody2D
 		}
 	}
 	
-	public void CalcMovement()
+	public void CalcMovement() //Handling movement physics 
 	{
 		if(moveSide != 0 && moveUp != 0)
 		{
-			if(dx>(dmax/2) || dx<(-dmax/2))
+			if(dx>((dmax+extraTwoAxisSpeed)/2) || dx<((-dmax-extraTwoAxisSpeed)/2))
 			{
-				if(dx>(dmax/2))
+				if(dx>((dmax+extraTwoAxisSpeed)/2))
 				{
 					dy = (dx/2)*-moveUp;
-					dx = dmax/2;
+					dx = (dmax/2);
 				}
-				if(dx<(-dmax/2))
+				if(dx<((-dmax-extraTwoAxisSpeed)/2))
 				{
 					dy = (dx/2)*moveUp;
 					dx = -dmax/2;
 				}
 			}
 			
-			if(dy>(dmax/2) || dy<(-dmax/2))
+			if(dy>((dmax+extraTwoAxisSpeed)/2) || dy<((-dmax-extraTwoAxisSpeed)/2))
 			{
-				if(dy>(dmax/2))
+				if(dy>((dmax+extraTwoAxisSpeed)/2))
 				{
 					dx = (dy/2)*moveSide;
 					dy = dmax/2;
 				}
-				if(dy<(-dmax/2))
+				if(dy<((-dmax-extraTwoAxisSpeed)/2))
 				{
 					dx = (dy/2)*-moveSide;
 					dy = -dmax/2;
 				}
 			}
 			
-			if((dx+ax) <= (dmax/2) && (dx+ax) >= (-dmax/2))
+			if((dx+ax) <= ((dmax+extraTwoAxisSpeed)/2) && (dx+ax) >= ((-dmax-extraTwoAxisSpeed)/2))
 			{
 				dx = dx+ax;
 			}
-			if((dy+ay) <= (dmax/2) && (dy+ay) >= (-dmax/2))
+			else if (dx < ((dmax+extraTwoAxisSpeed)/2) && dx > ((-dmax-extraTwoAxisSpeed)/2))
+			{
+				if(dx > 0)
+				{
+					dx = ((dmax+extraTwoAxisSpeed)/2);
+				}
+				if(dx < 0)
+				{
+					dx = -((dmax+extraTwoAxisSpeed)/2);
+				}
+			}
+			if((dy+ay) <= ((dmax+extraTwoAxisSpeed)/2) && (dy+ay) >= ((-dmax-extraTwoAxisSpeed)/2))
 			{
 				dy = dy+ay;
+			}
+			else if (dy < ((dmax+extraTwoAxisSpeed)/2) && dy > ((-dmax-extraTwoAxisSpeed)/2))
+			{
+				if(dy > 0)
+				{
+					dy = ((dmax+extraTwoAxisSpeed)/2);
+				}
+				if(dy < 0)
+				{
+					dy = -((dmax+extraTwoAxisSpeed)/2);
+				}
 			}
 		}
 		else
