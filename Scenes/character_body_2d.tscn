@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://31onwrq5hswc"]
 
 [ext_resource type="Script" uid="uid://dp8ifwbftb7vk" path="res://Scripts/Player.cs" id="1_88kja"]
-[ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/Placeholder_dude.png" id="1_ymxaj"]
+[ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude.png" id="1_ymxaj"]
 [ext_resource type="Script" uid="uid://dolsjl64wwadx" path="res://Scripts/Camera2d.cs" id="3_it8n0"]
-[ext_resource type="Texture2D" uid="uid://b2piexvs52wkw" path="res://Assets/Sprites/Placeholder_dude_frame1.png" id="4_t38ji"]
-[ext_resource type="Texture2D" uid="uid://rml6dupery65" path="res://Assets/Sprites/Placeholder_dude_frame2.png" id="5_pbj7x"]
-[ext_resource type="Texture2D" uid="uid://dw24if4qun0fm" path="res://Assets/Sprites/Placeholder_dude_frame3.png" id="6_fxof2"]
-[ext_resource type="Texture2D" uid="uid://dwlg06ja08dch" path="res://Assets/Sprites/Placeholder_dude_upframe1.png" id="7_fxof2"]
-[ext_resource type="Texture2D" uid="uid://cc8276jnfese4" path="res://Assets/Sprites/Placeholder_dude_upframe2.png" id="8_601d1"]
+[ext_resource type="Texture2D" uid="uid://b2piexvs52wkw" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame1.png" id="4_t38ji"]
+[ext_resource type="Texture2D" uid="uid://rml6dupery65" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame2.png" id="5_pbj7x"]
+[ext_resource type="Texture2D" uid="uid://dw24if4qun0fm" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame3.png" id="6_fxof2"]
+[ext_resource type="Texture2D" uid="uid://dwlg06ja08dch" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe1.png" id="7_fxof2"]
+[ext_resource type="Texture2D" uid="uid://cc8276jnfese4" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe2.png" id="8_601d1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
 radius = 22.0

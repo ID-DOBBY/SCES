@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwyq7i2j4kpj7"
-path="res://.godot/imported/Placeholder_grasstile.png-d8d4f597c76676afe53038623adb41d2.ctex"
+uid="uid://rml6dupery65"
+path="res://.godot/imported/Placeholder_dude_frame2.png-0fa5dbf68bbe1c9fd0c2ecd1b7f4d65b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Placeholder_grasstile.png"
-dest_files=["res://.godot/imported/Placeholder_grasstile.png-d8d4f597c76676afe53038623adb41d2.ctex"]
+source_file="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame2.png"
+dest_files=["res://.godot/imported/Placeholder_dude_frame2.png-0fa5dbf68bbe1c9fd0c2ecd1b7f4d65b.ctex"]
 
 [params]
 

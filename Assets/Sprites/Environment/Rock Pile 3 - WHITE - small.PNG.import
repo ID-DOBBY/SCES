@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2800nwv3qlle"
-path="res://.godot/imported/Placeholder_stonetile.png-5b763545c52fb3c5bf7e2977c864e96b.ctex"
+uid="uid://bstcvfc66pojm"
+path="res://.godot/imported/Rock Pile 3 - WHITE - small.PNG-11a50494e1ac509b4866a6adb757468e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Placeholder_stonetile.png"
-dest_files=["res://.godot/imported/Placeholder_stonetile.png-5b763545c52fb3c5bf7e2977c864e96b.ctex"]
+source_file="res://Assets/Sprites/Environment/Rock Pile 3 - WHITE - small.PNG"
+dest_files=["res://.godot/imported/Rock Pile 3 - WHITE - small.PNG-11a50494e1ac509b4866a6adb757468e.ctex"]
 
 [params]
 

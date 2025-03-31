@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=4 uid="uid://b8pnolx3gnbf5"]
+[gd_scene load_steps=4 format=4 uid="uid://b8pnolx3gnbf5"]
 
 [ext_resource type="PackedScene" uid="uid://derdiedi1njt1" path="res://Scenes/map.tscn" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://31onwrq5hswc" path="res://Scenes/character_body_2d.tscn" id="2_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://cxwf16fnductx" path="res://Scenes/dropped_stone.tscn" id="3_wrm1d"]
 
 [node name="Node" type="Node"]
 
@@ -10,3 +11,6 @@ tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAA
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_wrm1d")]
 position = Vector2(1077, 684)
+
+[node name="Dropped_Stone" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1845, 204)
