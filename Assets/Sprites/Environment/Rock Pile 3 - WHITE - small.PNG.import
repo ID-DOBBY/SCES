@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba2lkwdio5myd"
-path="res://.godot/imported/AK.png-67e99585ec205118aeb2ed25a0d088c5.ctex"
+uid="uid://bstcvfc66pojm"
+path="res://.godot/imported/Rock Pile 3 - WHITE - small.PNG-11a50494e1ac509b4866a6adb757468e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/AK.png"
-dest_files=["res://.godot/imported/AK.png-67e99585ec205118aeb2ed25a0d088c5.ctex"]
+source_file="res://Assets/Sprites/Environment/Rock Pile 3 - WHITE - small.PNG"
+dest_files=["res://.godot/imported/Rock Pile 3 - WHITE - small.PNG-11a50494e1ac509b4866a6adb757468e.ctex"]
 
 [params]
 

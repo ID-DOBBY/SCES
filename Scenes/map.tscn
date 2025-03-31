@@ -1,8 +1,8 @@
 [gd_scene load_steps=7 format=4 uid="uid://derdiedi1njt1"]
 
-[ext_resource type="Texture2D" uid="uid://bwyq7i2j4kpj7" path="res://Assets/Sprites/Placeholder_grasstile.png" id="1_ci6au"]
+[ext_resource type="Texture2D" uid="uid://bwyq7i2j4kpj7" path="res://Assets/TileSets/Placeholder_grasstile.png" id="1_ci6au"]
 [ext_resource type="Script" uid="uid://b4sqmk6b62hvq" path="res://Scripts/Map.cs" id="2_26yhd"]
-[ext_resource type="Texture2D" uid="uid://2800nwv3qlle" path="res://Assets/Sprites/Placeholder_stonetile.png" id="2_p3ir5"]
+[ext_resource type="Texture2D" uid="uid://2800nwv3qlle" path="res://Assets/TileSets/Placeholder_stonetile.png" id="2_p3ir5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3ir5"]
 texture = ExtResource("1_ci6au")

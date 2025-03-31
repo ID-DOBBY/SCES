@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bij8au7c5t53r"
-path="res://.godot/imported/Placeholder_dude.png-103af15f5989463382c9469185a4e1bf.ctex"
+uid="uid://b2piexvs52wkw"
+path="res://.godot/imported/Placeholder_dude_frame1.png-eb5c4a87d9f5174cd998889dcc30eb47.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Placeholder_dude.png"
-dest_files=["res://.godot/imported/Placeholder_dude.png-103af15f5989463382c9469185a4e1bf.ctex"]
+source_file="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame1.png"
+dest_files=["res://.godot/imported/Placeholder_dude_frame1.png-eb5c4a87d9f5174cd998889dcc30eb47.ctex"]
 
 [params]
 

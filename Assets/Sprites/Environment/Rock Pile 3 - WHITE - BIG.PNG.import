@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cc8276jnfese4"
-path="res://.godot/imported/Placeholder_dude_upframe2.png-913af4de4285abfd5411d095292f02f4.ctex"
+uid="uid://d12c7te3bx1gb"
+path="res://.godot/imported/Rock Pile 3 - WHITE - BIG.PNG-26cdaacc3742e1e3e460f570a3a0276c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Placeholder_dude_upframe2.png"
-dest_files=["res://.godot/imported/Placeholder_dude_upframe2.png-913af4de4285abfd5411d095292f02f4.ctex"]
+source_file="res://Assets/Sprites/Environment/Rock Pile 3 - WHITE - BIG.PNG"
+dest_files=["res://.godot/imported/Rock Pile 3 - WHITE - BIG.PNG-26cdaacc3742e1e3e460f570a3a0276c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rml6dupery65"
-path="res://.godot/imported/Placeholder_dude_frame2.png-e53bb50975522b2413e5a11c53d9d3ff.ctex"
+uid="uid://2800nwv3qlle"
+path="res://.godot/imported/Placeholder_stonetile.png-6ea12dfb2f139b96b4d0caf741bd6af6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Placeholder_dude_frame2.png"
-dest_files=["res://.godot/imported/Placeholder_dude_frame2.png-e53bb50975522b2413e5a11c53d9d3ff.ctex"]
+source_file="res://Assets/TileSets/Placeholder_stonetile.png"
+dest_files=["res://.godot/imported/Placeholder_stonetile.png-6ea12dfb2f139b96b4d0caf741bd6af6.ctex"]
 
 [params]
 

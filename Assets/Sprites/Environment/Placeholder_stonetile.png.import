@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwyq7i2j4kpj7"
-path="res://.godot/imported/Placeholder_grasstile.png-d8d4f597c76676afe53038623adb41d2.ctex"
+uid="uid://2800nwv3qlle"
+path="res://.godot/imported/Placeholder_stonetile.png-a16735c0a79b3b7e95f6b59e12bea174.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Placeholder_grasstile.png"
-dest_files=["res://.godot/imported/Placeholder_grasstile.png-d8d4f597c76676afe53038623adb41d2.ctex"]
+source_file="res://Assets/Sprites/Environment/Placeholder_stonetile.png"
+dest_files=["res://.godot/imported/Placeholder_stonetile.png-a16735c0a79b3b7e95f6b59e12bea174.ctex"]
 
 [params]
 

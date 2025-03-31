@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2800nwv3qlle"
-path="res://.godot/imported/Placeholder_stonetile.png-5b763545c52fb3c5bf7e2977c864e96b.ctex"
+uid="uid://ba2lkwdio5myd"
+path="res://.godot/imported/AK.png-48b1ddcf2c31cd26ccb5b670f6e5d183.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Placeholder_stonetile.png"
-dest_files=["res://.godot/imported/Placeholder_stonetile.png-5b763545c52fb3c5bf7e2977c864e96b.ctex"]
+source_file="res://Assets/Sprites/PlayerCharacter/AK.png"
+dest_files=["res://.godot/imported/AK.png-48b1ddcf2c31cd26ccb5b670f6e5d183.ctex"]
 
 [params]
 
