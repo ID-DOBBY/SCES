@@ -12,9 +12,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("enter_build"):
-		
-	if event is InputEventMouseButton and event.is_pressed():
+	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT:
 			place(tile_map.local_to_map(get_global_mouse_position()))
 			
