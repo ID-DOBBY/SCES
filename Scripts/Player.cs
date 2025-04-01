@@ -274,7 +274,7 @@ public partial class Player : CharacterBody2D
 		
 		Vector2 velocity = Vector2.Zero;
 		velocity = new Vector2(dx, dy);
-		GD.Print("velocity: "+ velocity); //Just used to debug
+		//GD.Print("velocity: "+ velocity); //Just used to debug
 		Velocity = velocity;
 	}
 	public override void _PhysicsProcess(double delta)

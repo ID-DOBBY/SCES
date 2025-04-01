@@ -79,9 +79,12 @@ frame_progress = 0.182148
 [node name="GunPivot" type="Node2D" parent="."]
 position = Vector2(0, -0.5)
 script = ExtResource("9_tx1dd")
+Distance = 20.0
 BulletScene = ExtResource("10_pu2lt")
+FireRate = 0.15
+bulletDistanceFromPivot = 175.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GunPivot"]
-position = Vector2(68, -0.5)
+position = Vector2(68.5, 1)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("10_gymyn")

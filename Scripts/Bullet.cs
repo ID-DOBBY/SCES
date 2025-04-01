@@ -3,8 +3,8 @@ using System;
 
 public partial class Bullet : Node2D
 {
-	[Export] public float Speed = 500f; // Speed of the bullet
-	[Export] public float Lifetime = 2f; // Time before the bullet is deleted
+	[Export] public float Speed = 800f; // Speed of the bullet
+	[Export] public float Lifetime = 3f; // Time before the bullet is deleted
 
 	private Vector2 _velocity;
 
