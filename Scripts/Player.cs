@@ -3,18 +3,18 @@ using Godot;
 public partial class Player : CharacterBody2D
 {
 	
-	[Export] float ax = 0f; //Acceleration X axis
-	[Export] float dx = 0f; //Velocity X axis
+	float ax = 0f; //Acceleration X axis
+	float dx = 0f; //Velocity X axis
 	
-	[Export] float ay = 0f; //Acceleration Y axis
-	[Export] float dy = 0f; //Velocity Y Axis
+	float ay = 0f; //Acceleration Y axis
+	float dy = 0f; //Velocity Y Axis
 	
 	[Export] float amax = 20f;//Max acceleration
 	[Export] float aspeed = 6f; //How fast the player accelerates
 	[Export] float dmax = 380f;//Max Velocity
-	[Export] float resistance = -32f; //How fast the player decelerates
-	[Export] int moveUp = 0; //Leave 0
-	[Export] int moveSide = 0; //Leave 0
+	[Export] float resistance = -32f; //How fast the player decelerates MAKE NEGATIVE
+	int moveUp = 0; //LEAVE 0 used to know if player is moving to the side
+	int moveSide = 0; //LEAVE 0  used to know if player is moving up/down
 	[Export] float extraTwoAxisSpeed = 110f; // Extra speed given when going up/down and to the side   IT IS HALVED SO PUT DOUBLE THE NUMBER YOU WANT
 	private AnimatedSprite2D _animatedSprite;
 	 public override void _Ready()
