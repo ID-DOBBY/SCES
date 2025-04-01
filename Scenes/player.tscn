@@ -1,15 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://31onwrq5hswc"]
+[gd_scene load_steps=14 format=3 uid="uid://31onwrq5hswc"]
 
 [ext_resource type="Script" uid="uid://dp8ifwbftb7vk" path="res://Scripts/Player.cs" id="1_88kja"]
-[ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/Placeholder_dude.png" id="1_ymxaj"]
+[ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude.png" id="1_ymxaj"]
 [ext_resource type="Script" uid="uid://dolsjl64wwadx" path="res://Scripts/Camera2d.cs" id="3_it8n0"]
-[ext_resource type="Texture2D" uid="uid://b2piexvs52wkw" path="res://Assets/Sprites/Placeholder_dude_frame1.png" id="4_t38ji"]
-[ext_resource type="Texture2D" uid="uid://rml6dupery65" path="res://Assets/Sprites/Placeholder_dude_frame2.png" id="5_pbj7x"]
-[ext_resource type="Texture2D" uid="uid://dw24if4qun0fm" path="res://Assets/Sprites/Placeholder_dude_frame3.png" id="6_fxof2"]
-[ext_resource type="Texture2D" uid="uid://dwlg06ja08dch" path="res://Assets/Sprites/Placeholder_dude_upframe1.png" id="7_fxof2"]
-[ext_resource type="Texture2D" uid="uid://cc8276jnfese4" path="res://Assets/Sprites/Placeholder_dude_upframe2.png" id="8_601d1"]
-[ext_resource type="Script" uid="uid://bxm1il7yoxmpy" path="res://Scenes/GunPivot.cs" id="9_tx1dd"]
-[ext_resource type="Texture2D" uid="uid://ba2lkwdio5myd" path="res://Assets/Sprites/AK.png" id="10_gymyn"]
+[ext_resource type="Texture2D" uid="uid://b2piexvs52wkw" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame1.png" id="4_t38ji"]
+[ext_resource type="Texture2D" uid="uid://rml6dupery65" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame2.png" id="5_pbj7x"]
+[ext_resource type="Texture2D" uid="uid://dw24if4qun0fm" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame3.png" id="6_fxof2"]
+[ext_resource type="Texture2D" uid="uid://dwlg06ja08dch" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe1.png" id="7_fxof2"]
+[ext_resource type="Texture2D" uid="uid://cc8276jnfese4" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe2.png" id="8_601d1"]
+[ext_resource type="Script" uid="uid://bxm1il7yoxmpy" path="res://Scripts/GunPivot.cs" id="9_tx1dd"]
+[ext_resource type="Texture2D" uid="uid://ba2lkwdio5myd" path="res://Assets/Sprites/PlayerCharacter/AK.png" id="10_gymyn"]
+[ext_resource type="PackedScene" uid="uid://o76ugyp574jk" path="res://Scenes/bullet.tscn" id="10_pu2lt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
 radius = 22.0
@@ -78,8 +79,12 @@ frame_progress = 0.182148
 [node name="GunPivot" type="Node2D" parent="."]
 position = Vector2(0, -0.5)
 script = ExtResource("9_tx1dd")
+Distance = 20.0
+BulletScene = ExtResource("10_pu2lt")
+FireRate = 0.15
+bulletDistanceFromPivot = 175.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GunPivot"]
-position = Vector2(68, -0.5)
+position = Vector2(68.5, 1)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("10_gymyn")

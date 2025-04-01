@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dmotndqs6hpqq"]
+
+[ext_resource type="Texture2D" uid="uid://5u1hg8rab4qf" path="res://Assets/Sprites/Zombie/Zombf4.png" id="1_iyl7r"]
+[ext_resource type="Texture2D" uid="uid://dylo8r2mcgspp" path="res://Assets/Sprites/Zombie/ZombIdle.png" id="1_vy0uf"]
+[ext_resource type="Script" uid="uid://dxi0gnb0c80b5" path="res://Zombie.cs" id="1_w2xga"]
+[ext_resource type="Texture2D" uid="uid://cu72pxkrub0qv" path="res://Assets/Sprites/Zombie/Zombf3.png" id="2_w2xga"]
+[ext_resource type="Texture2D" uid="uid://csvum1wsshfqu" path="res://Assets/Sprites/Zombie/Zombf2.png" id="3_w2xga"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4slyf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vy0uf")
+}],
+"loop": true,
+"name": &"ZombIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_w2xga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_iyl7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_w2xga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_iyl7r")
+}],
+"loop": true,
+"name": &"ZombWalk",
+"speed": 5.0
+}]
+
+[node name="Zombie" type="CharacterBody2D"]
+script = ExtResource("1_w2xga")
+DetectionRadius = 800.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(8, 8)
+sprite_frames = SubResource("SpriteFrames_4slyf")
+animation = &"ZombIdle"
