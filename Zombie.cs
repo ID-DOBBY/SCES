@@ -5,11 +5,30 @@ public partial class Zombie : CharacterBody2D
 	[Export] public CharacterBody2D Player; // Exported field for manual assignment
 	[Export] public float Speed = 100f;
 	[Export] public float DetectionRadius = 200f;
+	[Export] public int Health = 5;
 	private AnimatedSprite2D _animatedSprite;
 	 public override void _Ready()
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
+	
+	public void TakeDamage(int damage)
+	{
+		Health -= damage;
+		GD.Print("Zombie took damage! Health: " + Health);
+
+		if (Health <= 0)
+		{
+			Die();
+		}
+	}
+
+	private void Die()
+	{
+		GD.Print("Zombie died!");
+		QueueFree(); // Removes the zombie from the scene
+	}
+	
 	
 	public override void _PhysicsProcess(double delta)
 	{
