@@ -12,6 +12,13 @@ tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAA
 [node name="Player" parent="." instance=ExtResource("2_wrm1d")]
 
 [node name="Zombie" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("3_wrm1d")]
-position = Vector2(1862, 448)
+position = Vector2(1672, 509)
 Player = NodePath("../Player")
-DetectionRadius = 850.0
+
+[node name="Zombie2" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("3_wrm1d")]
+position = Vector2(1540, 768)
+Player = NodePath("../Player")
+
+[node name="Zombie3" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("3_wrm1d")]
+position = Vector2(1524, 280)
+Player = NodePath("../Player")

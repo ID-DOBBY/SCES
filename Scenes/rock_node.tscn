@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm5ks006jhq8"]
 
-[ext_resource type="Script" uid="uid://bjgdfneo5ddsd" path="res://Scenes/rock_node.gd" id="1_2egk0"]
+[ext_resource type="Script" uid="uid://bjgdfneo5ddsd" path="res://Scripts/rock_node.gd" id="1_2egk0"]
 [ext_resource type="Texture2D" uid="uid://bstcvfc66pojm" path="res://Assets/Sprites/Environment/Rock Pile 3 - WHITE - small.PNG" id="1_fwjll"]
 
 [node name="Rock_Node" type="StaticBody2D"]
