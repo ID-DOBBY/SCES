@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmotndqs6hpqq"]
+[gd_scene load_steps=8 format=3 uid="uid://dmotndqs6hpqq"]
 
 [ext_resource type="Texture2D" uid="uid://5u1hg8rab4qf" path="res://Assets/Sprites/Zombie/Zombf4.png" id="1_iyl7r"]
 [ext_resource type="Texture2D" uid="uid://dylo8r2mcgspp" path="res://Assets/Sprites/Zombie/ZombIdle.png" id="1_vy0uf"]
@@ -34,6 +34,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2xga"]
+size = Vector2(132, 210)
+
 [node name="Zombie" type="CharacterBody2D"]
 script = ExtResource("1_w2xga")
 DetectionRadius = 800.0
@@ -42,3 +45,7 @@ DetectionRadius = 800.0
 scale = Vector2(8, 8)
 sprite_frames = SubResource("SpriteFrames_4slyf")
 animation = &"ZombIdle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 8)
+shape = SubResource("RectangleShape2D_w2xga")
