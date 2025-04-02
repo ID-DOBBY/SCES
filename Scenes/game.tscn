@@ -11,14 +11,26 @@ tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAA
 
 [node name="Player" parent="." instance=ExtResource("2_wrm1d")]
 
-[node name="Zombie" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("3_wrm1d")]
-position = Vector2(1672, 509)
-Player = NodePath("../Player")
+[node name="Zombie" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1294, 682)
 
-[node name="Zombie2" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("3_wrm1d")]
-position = Vector2(1540, 768)
-Player = NodePath("../Player")
+[node name="Zombie2" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1575, 465)
 
-[node name="Zombie3" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("3_wrm1d")]
-position = Vector2(1524, 280)
-Player = NodePath("../Player")
+[node name="Zombie3" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1537, 146)
+
+[node name="Zombie4" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1220, 0)
+
+[node name="Zombie5" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1035, 1065)
+
+[node name="Zombie6" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1321, 995)
+
+[node name="Zombie7" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1555, 811)
+
+[node name="Zombie8" parent="." instance=ExtResource("3_wrm1d")]
+position = Vector2(1299, 341)

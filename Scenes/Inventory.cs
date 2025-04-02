@@ -16,5 +16,9 @@ public partial class Inventory : Node
 			Value = value;
 		}
 	}
-	[Export] public int ammo = 999; //Not used rn cause idfl
+	[Export] public int ammo = 999; 
+	public void AddItem()
+	{
+		
+	}
 }

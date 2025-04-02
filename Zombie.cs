@@ -2,15 +2,27 @@ using Godot;
 
 public partial class Zombie : CharacterBody2D
 {
-	[Export] public CharacterBody2D Player; // Exported field for manual assignment
+	public CharacterBody2D Player;
 	[Export] public float Speed = 100f;
 	[Export] public float DetectionRadius = 200f;
 	[Export] public int Health = 5;
 	private AnimatedSprite2D _animatedSprite;
-	 public override void _Ready()
+
+	public override void _Ready()
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		
+		// Auto-assign the player if not manually assigned
+		if (Player == null)
+		{
+			Player = GetTree().GetFirstNodeInGroup("Player") as CharacterBody2D;
+			if (Player == null)
+			{
+				GD.PrintErr("Player not found! Make sure the player is in the 'Player' group.");
+			}
+		}
 	}
+	
 	
 	public void TakeDamage(int damage)
 	{
@@ -29,10 +41,13 @@ public partial class Zombie : CharacterBody2D
 		QueueFree(); // Removes the zombie from the scene
 	}
 	
-	
 	public override void _PhysicsProcess(double delta)
 	{
-		if (Player == null) return;
+		if (Player == null) 
+		{
+			GD.Print("Player is Null");
+			return;
+		}
 
 		float distance = GlobalPosition.DistanceTo(Player.GlobalPosition);
 
@@ -40,12 +55,12 @@ public partial class Zombie : CharacterBody2D
 		{
 			// Chase the player
 			Vector2 direction = (Player.GlobalPosition - GlobalPosition).Normalized();
-			if(direction.X > 0)
+			if (direction.X > 0)
 			{
 				_animatedSprite.Play("ZombWalk");
 				_animatedSprite.FlipH = false;
 			}
-			if(direction.X < 0)
+			else if (direction.X < 0)
 			{
 				_animatedSprite.Play("ZombWalk");
 				_animatedSprite.FlipH = true;

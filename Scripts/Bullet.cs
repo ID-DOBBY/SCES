@@ -34,7 +34,7 @@ public partial class Bullet : Area2D
 			{
 				GD.Print("BLOODSCENE NULL");
 			}
-			GD.Print($"Bullet GX: {GlobalPosition.X} GY: {GlobalPosition.Y} PX: {Position.X} Y: {Position.Y}");
+			//GD.Print($"Bullet GX: {GlobalPosition.X} GY: {GlobalPosition.Y} PX: {Position.X} Y: {Position.Y}");
 			Blood blood = (Blood)BloodScene.Instantiate();
 			blood.GlobalPosition = GlobalPosition;
 			blood.Initialize();
