@@ -20,6 +20,7 @@ public partial class Player : CharacterBody2D
 	 public override void _Ready()
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		AddToGroup("Player");
 	}
 	
 	public void GetInput() //Getting input and handling animations

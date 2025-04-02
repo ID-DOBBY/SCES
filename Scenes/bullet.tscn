@@ -9,8 +9,8 @@ size = Vector2(14, 8)
 
 [node name="Bullet" type="Area2D"]
 script = ExtResource("1_oduel")
-Speed = 1000.0
-Lifetime = 2.0
+Speed = 1400.0
+Lifetime = 1.5
 BloodScene = ExtResource("2_ycag2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -7,13 +7,15 @@ public partial class GunPivot : Node2D
 	[Export] public PackedScene BulletScene;
 	[Export] public float FireRate = 0.2f; //Gun fire speed
 	[Export] public float bulletDistanceFromPivot = 70f; //Bullet distance from the pivot (Should be higher than gun distance)
-	
+	int ammo = 0;
+	private Sprite2D _sprite;
 	private Node2D _player;
 	private Node2D _bulletContainer;
 	private float _fireCooldown = 0f; //Honestly idk what this does so just leave it
 
 	public override void _Ready()
 	{
+		 _sprite = GetNode<Sprite2D>("Sprite2D"); // Get the child Sprite2D node
 		_player = GetParent<Node2D>();
 
 		// Find the BulletContainer node in the scene
@@ -31,9 +33,18 @@ public partial class GunPivot : Node2D
 		Vector2 mousePos = GetGlobalMousePosition();
 		Vector2 playerPos = _player.GlobalPosition;
 		Vector2 direction = (mousePos - playerPos).Normalized();
-
+		//GD.Print($"Direction: {direction}");
+		
 		Position = direction * Distance;
-
+		if(direction.X < 0) //Checking which way the gun is facing so the sprite is not upside down
+		{
+			_sprite.FlipV = true;
+		}
+		else
+		{
+			_sprite.FlipV = false;
+		}
+		
 		float targetRotation = direction.Angle();
 		Rotation = Mathf.LerpAngle(Rotation, targetRotation, (float)delta * RotationSpeed);
 
@@ -52,11 +63,11 @@ public partial class GunPivot : Node2D
 			GD.PrintErr("BulletScene not assigned!");
 			return;
 		}
-
+		
 		Bullet bullet = (Bullet)BulletScene.Instantiate();
 		bullet.GlobalPosition = GlobalPosition + (direction * bulletDistanceFromPivot);
 		bullet.Initialize(direction);
-
+		
 		// Add to BulletContainer if available, otherwise add to the current scene
 		if (_bulletContainer != null)
 			_bulletContainer.AddChild(bullet);
