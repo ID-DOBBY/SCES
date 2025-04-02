@@ -1,20 +1,27 @@
 [gd_scene load_steps=4 format=3 uid="uid://cv6oto0c0lia7"]
 
 [ext_resource type="Texture2D" uid="uid://ccgg5gwon0ock" path="res://Assets/Sprites/Environment/blood_particle.png" id="1_rgh2v"]
-[ext_resource type="Script" uid="uid://bp3ss3c1slyiy" path="res://Scenes/Blood.cs" id="2_8amu8"]
+[ext_resource type="Script" uid="uid://2tx40v426d0b" path="res://Scenes/blood.gd" id="2_8amu8"]
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8amu8"]
 particle_flag_disable_z = true
+angle_min = -115.9
+angle_max = 306.2
+spread = 64.66
+initial_velocity_max = 339.08
 gravity = Vector3(0, 98, 0)
 
 [node name="Blood" type="GPUParticles2D"]
 emitting = false
 amount = 20
 texture = ExtResource("1_rgh2v")
-lifetime = 1.05
+lifetime = 0.6
 one_shot = true
 explosiveness = 1.0
 randomness = 0.11
 trail_enabled = true
+trail_lifetime = 0.12
 process_material = SubResource("ParticleProcessMaterial_8amu8")
 script = ExtResource("2_8amu8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
