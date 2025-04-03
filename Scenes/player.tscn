@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bxm1il7yoxmpy" path="res://Scripts/GunPivot.cs" id="9_tx1dd"]
 [ext_resource type="Texture2D" uid="uid://ba2lkwdio5myd" path="res://Assets/Sprites/PlayerCharacter/AK.png" id="10_gymyn"]
 [ext_resource type="PackedScene" uid="uid://o76ugyp574jk" path="res://Scenes/bullet.tscn" id="10_pu2lt"]
-[ext_resource type="Script" uid="uid://bllcpwu4778t0" path="res://Scenes/Inventory.cs" id="12_pu2lt"]
+[ext_resource type="Script" path="res://Scenes/Inventory.cs" id="12_pu2lt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
 radius = 22.0

@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://derdiedi1njt1" path="res://Scenes/map.tscn" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://31onwrq5hswc" path="res://Scenes/player.tscn" id="2_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://dmotndqs6hpqq" path="res://Scenes/zombie.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" path="res://Scenes/zombie.tscn" id="3_wrm1d"]
 [ext_resource type="PackedScene" uid="uid://cxwf16fnductx" path="res://Scenes/dropped_stone.tscn" id="4_3dryh"]
 
 [node name="Node" type="Node"]
