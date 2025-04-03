@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://b8pnolx3gnbf5"]
+[gd_scene load_steps=5 format=4 uid="uid://b8pnolx3gnbf5"]
 
 [ext_resource type="PackedScene" uid="uid://derdiedi1njt1" path="res://Scenes/map.tscn" id="1_qxrlw"]
 [ext_resource type="PackedScene" uid="uid://31onwrq5hswc" path="res://Scenes/player.tscn" id="2_wrm1d"]
-[ext_resource type="PackedScene" uid="uid://dmotndqs6hpqq" path="res://Scenes/zombie.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" path="res://Scenes/zombie.tscn" id="3_wrm1d"]
+[ext_resource type="PackedScene" uid="uid://cxwf16fnductx" path="res://Scenes/dropped_stone.tscn" id="4_3dryh"]
 
 [node name="Node" type="Node"]
 
@@ -34,3 +35,21 @@ position = Vector2(1555, 811)
 
 [node name="Zombie8" parent="." instance=ExtResource("3_wrm1d")]
 position = Vector2(1299, 341)
+
+[node name="Dropped_Stone" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(-235, 182)
+
+[node name="Dropped_Stone2" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(-668, 229)
+
+[node name="Dropped_Stone3" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(-866, 851)
+
+[node name="Dropped_Stone4" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(-575, 2304)
+
+[node name="Dropped_Stone5" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(-419, 2396)
+
+[node name="Dropped_Stone6" parent="." instance=ExtResource("4_3dryh")]
+position = Vector2(-575, 2456)
