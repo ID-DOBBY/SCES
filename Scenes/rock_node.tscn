@@ -4,7 +4,20 @@
 [ext_resource type="Texture2D" uid="uid://bstcvfc66pojm" path="res://Assets/Sprites/Environment/Rock Pile 3 - WHITE - small.PNG" id="1_fwjll"]
 
 [node name="Rock_Node" type="StaticBody2D"]
+scale = Vector2(3, 3)
 script = ExtResource("1_2egk0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_fwjll")
+
+[node name="Collider" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(1, -13, 7, -13, 14, -2, 16, 4, 16, 9, 6, 12, -13, 12, -16, 8, -13, 0, -6, -9)
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_mask = 2
+
+[node name="Collider" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(1, -13, 7, -13, 14, -2, 16, 4, 16, 9, 6, 12, -13, 12, -16, 8, -13, 0, -6, -9)
+
+[connection signal="area_shape_entered" from="Area2D" to="." method="_on_area_2d_area_shape_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

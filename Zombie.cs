@@ -24,11 +24,13 @@ public partial class Zombie : CharacterBody2D
 	}
 	
 	
-	public void TakeDamage(int damage)
+	async public void TakeDamage(int damage)
 	{
 		Health -= damage;
 		GD.Print("Zombie took damage! Health: " + Health);
-
+		_animatedSprite.Modulate = new Color(255,0,0);
+		await ToSignal(GetTree().CreateTimer(0.1f), "timeout");
+		_animatedSprite.Modulate = new Color(1,1,1);
 		if (Health <= 0)
 		{
 			Die();
