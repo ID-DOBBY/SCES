@@ -3,7 +3,7 @@ using System;
 //Just setting up foundations 
 public partial class Inventory : Node
 {
-	public struct Item //Foundaations for future Not used RN
+	public struct Item //Foundations for future Not used RN
 	{
 	public string Name;
 	public int Amount;
@@ -17,7 +17,8 @@ public partial class Inventory : Node
 		}
 	}
 	[Export] public int ammo = 999; 
-	public void AddItem()
+	[Export] public int stone = 0;
+		public void AddItem()
 	{
 		
 	}

@@ -1,17 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://o76ugyp574jk"]
+[gd_scene load_steps=4 format=3 uid="uid://o76ugyp574jk"]
 
 [ext_resource type="Script" uid="uid://c7ubc8i8pjkju" path="res://Scripts/Bullet.cs" id="1_oduel"]
 [ext_resource type="Texture2D" uid="uid://cl7afbkafdbj2" path="res://Assets/Sprites/Bullet.png" id="1_xjght"]
-[ext_resource type="PackedScene" uid="uid://cv6oto0c0lia7" path="res://Scenes/blood.tscn" id="2_ycag2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ycag2"]
 size = Vector2(14, 8)
 
 [node name="Bullet" type="Area2D"]
+collision_layer = 3
 script = ExtResource("1_oduel")
 Speed = 1400.0
 Lifetime = 1.5
-BloodScene = ExtResource("2_ycag2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2, 2)
