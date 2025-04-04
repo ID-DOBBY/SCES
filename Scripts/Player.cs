@@ -301,5 +301,8 @@ public partial class Player : CharacterBody2D
 		GetInput();
 		CalcMovement();
 		MoveAndSlide();
-	}
+
+        Label healthLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("HealthLabel");
+        healthLabel.Text = $"Health: {health}";
+    }
 }

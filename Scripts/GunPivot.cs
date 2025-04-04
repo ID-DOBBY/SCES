@@ -36,7 +36,8 @@ public partial class GunPivot : Node2D
 		
 		if (_player == null) return;
 
-		Vector2 mousePos = GetGlobalMousePosition();
+        var Inv = GetTree().Root.GetNode<Node>("Node/Player").GetNode<Inventory>("Inventory");
+        Vector2 mousePos = GetGlobalMousePosition();
 		Vector2 playerPos = _player.GlobalPosition;
 		Vector2 direction = (mousePos - playerPos).Normalized();
 		//GD.Print($"Direction: {direction}");
@@ -67,16 +68,50 @@ public partial class GunPivot : Node2D
 			
 			_fireCooldown = FireRate;
 		}
-	}
-	
-	private async void Reload()
-	{
-		GD.Print("Reloading!");
-		await ToSignal(GetTree().CreateTimer(reloadTime), "timeout");
-		ammoInMag = magSize;
-	}
+        Label magLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("MagLabel");
+        magLabel.Text = $"Mag: {ammoInMag}/30";
 
-	private void Shoot(Vector2 direction) //Called when shoot input (Left click) is triggered
+        Label ammoLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("AmmoLabel");
+        ammoLabel.Text = $"Ammo: {Inv.ammo}";
+    }
+	bool isReloading = false;
+    private async void Reload()
+	{
+        var Inv = GetTree().Root.GetNode<Node>("Node/Player").GetNode<Inventory>("Inventory");
+        if (isReloading == false)
+		{
+			if (Inv.ammo != 0)
+			{
+				GD.Print($"Ammo in Inv: {Inv.ammo}");
+				if (Inv.ammo > 30)
+				{
+					isReloading = true;
+					GD.Print("Reloading!");
+					await ToSignal(GetTree().CreateTimer(reloadTime), "timeout");
+					ammoInMag = magSize;
+					Inv.ammo -= magSize;
+					isReloading = false;
+				}
+				else if (Inv.ammo < 30 && Inv.ammo > 0)
+				{
+					isReloading = true;
+					GD.Print("Reloading with whats left!");
+					await ToSignal(GetTree().CreateTimer(reloadTime), "timeout");
+					ammoInMag = Inv.ammo;
+					Inv.ammo = 0;
+					isReloading = false;
+				}
+			}
+			else
+			{
+				GD.Print("No Ammo Left!");
+			}
+            
+        }
+    }
+    
+
+    private void Shoot(Vector2 direction) //Called when shoot input (Left click) is triggered
 	{
 		ammoInMag--; //Removing a bullet from mag
 		if (BulletScene == null) //Just checking if Bullet scene is attached

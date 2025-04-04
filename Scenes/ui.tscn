@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b2wi25gcs83c6"]
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="AmmoLabel" type="Label" parent="."]
+offset_left = 1534.0
+offset_top = 851.0
+offset_right = 1709.0
+offset_bottom = 927.0
+theme_override_font_sizes/font_size = 55
+text = "Ammo"
+
+[node name="MagLabel" type="Label" parent="."]
+offset_left = 1558.0
+offset_top = 764.0
+offset_right = 1671.0
+offset_bottom = 840.0
+theme_override_font_sizes/font_size = 55
+text = "Mag"
+
+[node name="HealthLabel" type="Label" parent="."]
+offset_left = 110.0
+offset_top = 80.0
+offset_right = 287.0
+offset_bottom = 156.0
+theme_override_font_sizes/font_size = 55
+text = "Health"

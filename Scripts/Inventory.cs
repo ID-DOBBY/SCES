@@ -16,7 +16,7 @@ public partial class Inventory : Node
 			Value = value;
 		}
 	}
-	[Export] public int ammo = 999; 
+	[Export] public int ammo = 50; 
 	[Export] public int stone = 0;
 		public void AddItem()
 	{

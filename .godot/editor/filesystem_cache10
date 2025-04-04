@@ -1,0 +1,59 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1743782156
+icon.svg::CompressedTexture2D/CompressedTexture2D::1617059125721367927::1743781087::1743781103::1::::<><><>0<>0<>aafd06f2ae8641e766d8489c05e6731f<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://Assets/::1743781087
+::res://Assets/SFX/::1743781087
+::res://Assets/Sprites/::1743781103
+Bullet.png::CompressedTexture2D/CompressedTexture2D::5610987732482191033::1743781087::1743781103::1::::<><><>0<>0<>fbbc6048cc08d375fec37c7a6b742623<>res://.godot/imported/Bullet.png-19916a6bc6813834b54920a56acd4b9e.ctex::
+::res://Assets/Sprites/Environment/::1743781103
+blood_particle.png::CompressedTexture2D/CompressedTexture2D::4926023546740636382::1743781087::1743781103::1::::<><><>0<>0<>0579d70ed5eb298a1dcb50c1209b5622<>res://.godot/imported/blood_particle.png-95898124cefc85f7fcae530267bfdcc1.ctex::
+Placeholder_grasstile.png::CompressedTexture2D/CompressedTexture2D::3981149389461071886::1743781087::1743781103::1::::<><><>0<>0<>4de05dbde84702711b24e4c60f33292b<>res://.godot/imported/Placeholder_grasstile.png-6754b17e57cbc54a29befb4da77611f5.ctex::
+Placeholder_stonetile.png::CompressedTexture2D/CompressedTexture2D::1964786531559083270::1743781087::1743781103::1::::<><><>0<>0<>fd9de369efda2988c13511a0fc3d7f24<>res://.godot/imported/Placeholder_stonetile.png-a16735c0a79b3b7e95f6b59e12bea174.ctex::
+Rock Pile 2 - WHITE - small.PNG::CompressedTexture2D/CompressedTexture2D::7316342601415267807::1743781087::1743781103::1::::<><><>0<>0<>bf718307358c954fb0f5258a4ba458ae<>res://.godot/imported/Rock Pile 2 - WHITE - small.PNG-2d3d338dc864ec7820472d7cbef15927.ctex::
+Rock Pile 3 - WHITE - BIG.PNG::CompressedTexture2D/CompressedTexture2D::9040089769815581565::1743781087::1743781103::1::::<><><>0<>0<>c564f891a3f78545fd7d04b2da146b32<>res://.godot/imported/Rock Pile 3 - WHITE - BIG.PNG-26cdaacc3742e1e3e460f570a3a0276c.ctex::
+Rock Pile 3 - WHITE - small.PNG::CompressedTexture2D/CompressedTexture2D::3689202249319245630::1743781087::1743781103::1::::<><><>0<>0<>2fb911888fab946e3b2cf34983e9a32e<>res://.godot/imported/Rock Pile 3 - WHITE - small.PNG-11a50494e1ac509b4866a6adb757468e.ctex::
+::res://Assets/Sprites/PlayerCharacter/::1743781103
+AK.png::CompressedTexture2D/CompressedTexture2D::2442845788443697395::1743781087::1743781103::1::::<><><>0<>0<>0ee52ac1db1793a5adeed4209154a01e<>res://.godot/imported/AK.png-48b1ddcf2c31cd26ccb5b670f6e5d183.ctex::
+Placeholder_dude.png::CompressedTexture2D/CompressedTexture2D::2968515593377678969::1743781087::1743781103::1::::<><><>0<>0<>d6935b2af2480601c74266c2659ffab6<>res://.godot/imported/Placeholder_dude.png-9af72e83fc94a473a6032a21da3f5a19.ctex::
+Placeholder_dude_frame1.png::CompressedTexture2D/CompressedTexture2D::4312979248685584122::1743781087::1743781103::1::::<><><>0<>0<>c5fcda8f9512d7fdf24743b405438075<>res://.godot/imported/Placeholder_dude_frame1.png-eb5c4a87d9f5174cd998889dcc30eb47.ctex::
+Placeholder_dude_frame2.png::CompressedTexture2D/CompressedTexture2D::1218706310580463172::1743781087::1743781103::1::::<><><>0<>0<>adeb9ae184d6bfd826029489e910f970<>res://.godot/imported/Placeholder_dude_frame2.png-0fa5dbf68bbe1c9fd0c2ecd1b7f4d65b.ctex::
+Placeholder_dude_frame3.png::CompressedTexture2D/CompressedTexture2D::8760930197787408514::1743781087::1743781103::1::::<><><>0<>0<>38f82284af44a0acc270bd026fee9562<>res://.godot/imported/Placeholder_dude_frame3.png-ecf90f5fcfceb00c6caadb6ddf2f1034.ctex::
+Placeholder_dude_upframe1.png::CompressedTexture2D/CompressedTexture2D::8726535355376697519::1743781087::1743781103::1::::<><><>0<>0<>e2a915fffb289581dcaa721260534a65<>res://.godot/imported/Placeholder_dude_upframe1.png-d2a42623e600ecd38c4fcbb9f756ea31.ctex::
+Placeholder_dude_upframe2.png::CompressedTexture2D/CompressedTexture2D::4983041667480505277::1743781087::1743781103::1::::<><><>0<>0<>870da5e918b1955604b4b38c86f06560<>res://.godot/imported/Placeholder_dude_upframe2.png-e6b5be7f726cb6d67f50ff1753e36c9b.ctex::
+::res://Assets/Sprites/Zombie/::1743781103
+Zombf1.png::CompressedTexture2D/CompressedTexture2D::5868489408572765857::1743781087::1743781103::1::::<><><>0<>0<>3dfa8b57c14e31e1d3e73d3c91c7aa0b<>res://.godot/imported/Zombf1.png-b72fdb6d024978e8226ff11b5a515395.ctex::
+Zombf2.png::CompressedTexture2D/CompressedTexture2D::6080829655523202400::1743781087::1743781103::1::::<><><>0<>0<>b3c433f48a977a59f55afea140f0d00d<>res://.godot/imported/Zombf2.png-89ebfbc995ba350015455dc5ff851547.ctex::
+Zombf3.png::CompressedTexture2D/CompressedTexture2D::6244345698274325761::1743781087::1743781103::1::::<><><>0<>0<>31d85b54c6d5197cb7f3ee054c73db46<>res://.godot/imported/Zombf3.png-7d0e99197dd2cd37385a3c51a5098ca8.ctex::
+Zombf4.png::CompressedTexture2D/CompressedTexture2D::2148544373482551553::1743781087::1743781103::1::::<><><>0<>0<>3a374acd1b30f4df1082a16785128f69<>res://.godot/imported/Zombf4.png-d6b514d0a096ade8e809c6e6e19d8513.ctex::
+ZombIdle.png::CompressedTexture2D/CompressedTexture2D::8867412357939156581::1743781087::1743781103::1::::<><><>0<>0<>cecadbbb9ebb9966d6ae32651792340e<>res://.godot/imported/ZombIdle.png-70661d9f7559ef5ec771f4490ca42431.ctex::
+::res://Assets/TileSets/::1743781103
+Placeholder_grasstile.png::CompressedTexture2D/CompressedTexture2D::3981149389461071886::1743781087::1743781103::1::::<><><>0<>0<>0b60423a8e30c335a1a7e84aa841eb2c<>res://.godot/imported/Placeholder_grasstile.png-4319d618442bb79530c289325e8edbaa.ctex::
+Placeholder_stonetile.png::CompressedTexture2D/CompressedTexture2D::1964786531559083270::1743781087::1743781103::1::::<><><>0<>0<>8f399a063b08032c9298f400bee368cd<>res://.godot/imported/Placeholder_stonetile.png-6ea12dfb2f139b96b4d0caf741bd6af6.ctex::
+tilemap_packed.png::CompressedTexture2D/CompressedTexture2D::6103345944271215537::1743781087::1743781103::1::::<><><>0<>0<>4e4294bba82cf366b5d20b091e8355a5<>res://.godot/imported/tilemap_packed.png-2e78d24284a1aedf1f295f9a336fc7a1.ctex::
+::res://Scenes/::1743782146
+blood.tscn::PackedScene::6311687536215392040::1743781601::0::1::::<><><>0<>0<><>::uid://ccgg5gwon0ock::::res://Assets/Sprites/Environment/blood_particle.png<>uid://2tx40v426d0b::::res://Scripts/blood.gd
+build_mode.tscn::PackedScene::8356119432950774367::1743781601::0::1::::<><><>0<>0<><>::uid://do4m4ingjgune::::res://Scripts/build_mode.gd<>uid://cs7rhlxmcw72l::::res://Assets/TileSets/tilemap_packed.png<>uid://cxwf16fnductx::::res://Scenes/dropped_stone.tscn
+bullet.tscn::PackedScene::1050622194654544368::1743781601::0::1::::<><><>0<>0<><>::uid://c7ubc8i8pjkju::::res://Scripts/Bullet.cs<>uid://cl7afbkafdbj2::::res://Assets/Sprites/Bullet.png
+dropped_stone.tscn::PackedScene::6432952733798956757::1743781087::0::1::::<><><>0<>0<><>::uid://dciddgll07cbf::::res://Assets/Sprites/Environment/Rock Pile 2 - WHITE - small.PNG<>uid://byfmxvpbybsmw::::res://Scripts/dropped_stone.gd
+game.tscn::PackedScene::4734433126647774292::1743782101::0::1::::<><><>0<>0<><>::uid://derdiedi1njt1::::res://Scenes/map.tscn<>uid://1coudls5176c::::res://Scenes/ui.tscn<>uid://31onwrq5hswc::::res://Scenes/player.tscn<>uid://dmotndqs6hpqq::::res://Scenes/zombie.tscn<>uid://cm5ks006jhq8::::res://Scenes/rock_node.tscn
+map.tscn::PackedScene::7475308499906551436::1743781601::0::1::::<><><>0<>0<><>::uid://bwyq7i2j4kpj7::::res://Assets/TileSets/Placeholder_grasstile.png<>uid://b4sqmk6b62hvq::::res://Scripts/Map.cs<>uid://2800nwv3qlle::::res://Assets/TileSets/Placeholder_stonetile.png
+player.tscn::PackedScene::2019835879232686862::1743781916::0::1::::<><><>0<>0<><>::uid://dp8ifwbftb7vk::::res://Scripts/Player.cs<>uid://bij8au7c5t53r::::res://Assets/Sprites/PlayerCharacter/Placeholder_dude.png<>uid://dolsjl64wwadx::::res://Scripts/Camera2d.cs<>uid://b2piexvs52wkw::::res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame1.png<>uid://rml6dupery65::::res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame2.png<>uid://dw24if4qun0fm::::res://Assets/Sprites/PlayerCharacter/Placeholder_dude_frame3.png<>uid://dwlg06ja08dch::::res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe1.png<>uid://cc8276jnfese4::::res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe2.png<>uid://bxm1il7yoxmpy::::res://Scripts/GunPivot.cs<>uid://ba2lkwdio5myd::::res://Assets/Sprites/PlayerCharacter/AK.png<>uid://o76ugyp574jk::::res://Scenes/bullet.tscn<>uid://bllcpwu4778t0::::res://Scripts/Inventory.cs
+rock_node.tscn::PackedScene::166990573264912373::1743781601::0::1::::<><><>0<>0<><>::uid://bjgdfneo5ddsd::::res://Scripts/rock_node.gd<>uid://bstcvfc66pojm::::res://Assets/Sprites/Environment/Rock Pile 3 - WHITE - small.PNG
+ui.tscn::PackedScene::4327471309972439611::1743781601::0::1::::<><><>0<>0<><>::
+wall.tscn::PackedScene::3431824632256559445::1743781601::0::1::::<><><>0<>0<><>::uid://cy7x0lh5auk4v::::res://Scripts/wall.gd<>uid://clphmkxsf42in::::res://Scripts/BlockData.gd<>uid://cs7rhlxmcw72l::::res://Assets/TileSets/tilemap_packed.png
+zombie.tscn::PackedScene::8031606484622333268::1743781601::0::1::::<><><>0<>0<><>::uid://5u1hg8rab4qf::::res://Assets/Sprites/Zombie/Zombf4.png<>uid://dylo8r2mcgspp::::res://Assets/Sprites/Zombie/ZombIdle.png<>uid://dxi0gnb0c80b5::::res://Scripts/Zombie.cs<>uid://cu72pxkrub0qv::::res://Assets/Sprites/Zombie/Zombf3.png<>uid://csvum1wsshfqu::::res://Assets/Sprites/Zombie/Zombf2.png
+::res://Scripts/::1743782072
+BlockData.gd::GDScript::5576331323781372609::1743781087::0::1::::BlockData<>Resource<><>0<>0<><>::
+Blood.cs::CSharpScript::3498182440486593344::1743781087::0::1::::<>GpuParticles2D<><>0<>0<><>::
+blood.gd::GDScript::1935771581290458215::1743781087::0::1::::<>GPUParticles2D<><>0<>0<><>::
+build_mode.gd::GDScript::8202553649370087118::1743781087::0::1::::<>Node2D<><>0<>0<><>::
+Bullet.cs::CSharpScript::7060237954613779910::1743781087::0::1::::<>Area2D<><>0<>0<><>::
+Camera2d.cs::CSharpScript::8165723622315034477::1743781087::0::1::::<>Camera2D<><>0<>0<><>::
+dropped_stone.gd::GDScript::4082045623189174622::1743781087::0::1::::<>StaticBody2D<><>0<>0<><>::
+GunPivot.cs::CSharpScript::4027130176880400606::1743781087::0::1::::<>Node2D<><>0<>0<><>::
+Inventory.cs::CSharpScript::3181355527671699267::1743782072::0::1::::<>Node<><>0<>0<><>::
+Map.cs::CSharpScript::4460049423390608542::1743781087::0::1::::<>TileMapLayer<><>0<>0<><>::
+Player.cs::CSharpScript::8280714993756569836::1743781087::0::1::::<>CharacterBody2D<><>0<>0<><>::
+rock_node.gd::GDScript::3030698312566652587::1743781087::0::1::::<>StaticBody2D<><>0<>0<><>::
+wall.gd::GDScript::6524875428444487095::1743781087::0::1::::<>StaticBody2D<><>0<>0<><>::
+Zombie.cs::CSharpScript::8791649801857357740::1743781087::0::1::::<>CharacterBody2D<><>0<>0<><>::

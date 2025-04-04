@@ -1,0 +1,107 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|c:\\users\\lucac\\documents\\scecsproject\\sces\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|solutionrelative:scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|c:\\users\\lucac\\documents\\scecsproject\\sces\\scripts\\gunpivot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|solutionrelative:scripts\\gunpivot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|c:\\users\\lucac\\documents\\scecsproject\\sces\\scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|solutionrelative:scripts\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|c:\\users\\lucac\\documents\\scecsproject\\sces\\scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|solutionrelative:scripts\\zombie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|c:\\users\\lucac\\documents\\scecsproject\\sces\\scripts\\blood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DBE5C58F-A975-4A6F-AEBE-5CFFAB9E6924}|SCES.csproj|solutionrelative:scripts\\blood.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\Player.cs",
+              "RelativeToolTip": "Scripts\\Player.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAA1wCsBAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T12:35:15.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\Inventory.cs",
+              "RelativeDocumentMoniker": "Scripts\\Inventory.cs",
+              "ToolTip": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\Inventory.cs",
+              "RelativeToolTip": "Scripts\\Inventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T12:15:04.745Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GunPivot.cs",
+              "DocumentMoniker": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\GunPivot.cs",
+              "RelativeDocumentMoniker": "Scripts\\GunPivot.cs",
+              "ToolTip": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\GunPivot.cs",
+              "RelativeToolTip": "Scripts\\GunPivot.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwEkAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T12:11:08.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Zombie.cs",
+              "DocumentMoniker": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\Zombie.cs",
+              "RelativeDocumentMoniker": "Scripts\\Zombie.cs",
+              "ToolTip": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\Zombie.cs",
+              "RelativeToolTip": "Scripts\\Zombie.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAIBJwFcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T12:07:16.572Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Blood.cs",
+              "DocumentMoniker": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\Blood.cs",
+              "RelativeDocumentMoniker": "Scripts\\Blood.cs",
+              "ToolTip": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\Scripts\\Blood.cs",
+              "RelativeToolTip": "Scripts\\Blood.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-04T12:06:36.841Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
