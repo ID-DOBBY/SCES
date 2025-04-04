@@ -95,7 +95,10 @@ public partial class Zombie : CharacterBody2D
 					if((TimeA-TimeB)>hitCooldown)
 					{
 						GD.Print("Hit!");
+						
+						if(Player != null)
 						Player.Call("TakeDamage");
+						
 						TimeB = TimeA;
 					}
 					
