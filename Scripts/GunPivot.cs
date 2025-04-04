@@ -7,7 +7,10 @@ public partial class GunPivot : Node2D
 	[Export] public PackedScene BulletScene;
 	[Export] public float FireRate = 0.2f; //Gun fire speed
 	[Export] public float bulletDistanceFromPivot = 70f; //Bullet distance from the pivot (Should be higher than gun distance)
-	int ammo = 0;
+	[Export] public int magSize = 30;
+	[Export] public float reloadTime = 2f;
+	
+	int ammoInMag;
 	private Sprite2D _sprite;
 	private Node2D _player;
 	private Node2D _bulletContainer;
@@ -17,7 +20,8 @@ public partial class GunPivot : Node2D
 	{
 		 _sprite = GetNode<Sprite2D>("Sprite2D"); // Get the child Sprite2D node
 		_player = GetParent<Node2D>();
-
+		
+		ammoInMag = magSize;
 		// Find the BulletContainer node in the scene
 		_bulletContainer = GetTree().CurrentScene.GetNodeOrNull<Node2D>("BulletContainer"); //Checking bullet scene is attached
 		if (_bulletContainer == null)
@@ -25,9 +29,11 @@ public partial class GunPivot : Node2D
 			GD.PrintErr("BulletContainer node not found! Bullets will be added to the current scene.");
 		}
 	}
-
+	
+	
 	public override void _Process(double delta)
 	{
+		
 		if (_player == null) return;
 
 		Vector2 mousePos = GetGlobalMousePosition();
@@ -47,18 +53,33 @@ public partial class GunPivot : Node2D
 		
 		float targetRotation = direction.Angle();
 		Rotation = Mathf.LerpAngle(Rotation, targetRotation, (float)delta * RotationSpeed);
+		
 
 		_fireCooldown -= (float)delta;
 		if (Input.IsActionPressed("shoot") && _fireCooldown <= 0)
 		{
+			//GD.Print($"Bullets in mag: {ammoInMag}"); //Used for debug
+			
+			if(ammoInMag > 0) //Checking if gun needs to be reloaded
 			Shoot(direction);
+			else
+			Reload();
+			
 			_fireCooldown = FireRate;
 		}
+	}
+	
+	private async void Reload()
+	{
+		GD.Print("Reloading!");
+		await ToSignal(GetTree().CreateTimer(reloadTime), "timeout");
+		ammoInMag = magSize;
 	}
 
 	private void Shoot(Vector2 direction) //Called when shoot input (Left click) is triggered
 	{
-		if (BulletScene == null)
+		ammoInMag--; //Removing a bullet from mag
+		if (BulletScene == null) //Just checking if Bullet scene is attached
 		{
 			GD.PrintErr("BulletScene not assigned!");
 			return;
