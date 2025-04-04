@@ -3,6 +3,9 @@ using Godot;
 public partial class Zombie : CharacterBody2D
 {
 	public CharacterBody2D Player;
+	double TimeA;
+	double TimeB;
+	[Export] double hitCooldown = 1000; //in Milliseconds
 	[Export] public float Speed = 100f;
 	[Export] public float DetectionRadius = 200f;
 	[Export] public int Health = 5;
@@ -11,6 +14,7 @@ public partial class Zombie : CharacterBody2D
 	public override void _Ready()
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+		AddToGroup("Enemy");
 		
 		// Auto-assign the player if not manually assigned
 		if (Player == null)
@@ -75,6 +79,32 @@ public partial class Zombie : CharacterBody2D
 			// Stop moving if out of range
 			Velocity = Vector2.Zero;
 			_animatedSprite.Play("ZombIdle");
+		}
+		
+		int collisionCount = GetSlideCollisionCount();
+		for (int i = 0; i < collisionCount; i++)
+		{
+			KinematicCollision2D collision = GetSlideCollision(i);
+			var collider = collision.GetCollider() as Node;
+			if(collider.IsInGroup("Player"))
+			{
+				TimeA = Time.GetTicksMsec();
+				GD.Print($"TimeA: {TimeA}  TimeB:{TimeB}");
+				if(TimeB != 0)
+				{
+					if((TimeA-TimeB)>hitCooldown)
+					{
+						GD.Print("Hit!");
+						Player.Call("TakeDamage");
+						TimeB = TimeA;
+					}
+					
+				}
+				else
+				{
+					TimeB = TimeA;
+				}
+			}
 		}
 	}
 }

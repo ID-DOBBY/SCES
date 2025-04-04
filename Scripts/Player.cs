@@ -13,6 +13,8 @@ public partial class Player : CharacterBody2D
 	[Export] float aspeed = 6f; //How fast the player accelerates
 	[Export] float dmax = 380f;//Max Velocity
 	[Export] float resistance = -32f; //How fast the player decelerates MAKE NEGATIVE
+	[Export] int health = 10;
+	
 	int moveUp = 0; //LEAVE 0 used to know if player is moving to the side
 	int moveSide = 0; //LEAVE 0  used to know if player is moving up/down
 	[Export] float extraTwoAxisSpeed = 110f; // Extra speed given when going up/down and to the side   IT IS HALVED SO PUT DOUBLE THE NUMBER YOU WANT
@@ -21,6 +23,22 @@ public partial class Player : CharacterBody2D
 	{
 		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 		AddToGroup("Player");
+	}
+	
+	public void TakeDamage()
+	{
+		health--;
+		GD.Print("Player took Damage Health: " + health);
+		
+		if(health <= 0)
+		{
+			Die();
+		}
+	}
+	
+	public void Die()
+	{
+		GD.Print("Player died");
 	}
 	
 	public void GetInput() //Getting input and handling animations
