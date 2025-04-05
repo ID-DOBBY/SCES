@@ -36,8 +36,8 @@ public partial class GunPivot : Node2D
 		
 		if (_player == null) return;
 
-        var Inv = GetTree().Root.GetNode<Node>("Node/Player").GetNode<Inventory>("Inventory");
-        Vector2 mousePos = GetGlobalMousePosition();
+		var Inv = GetTree().Root.GetNode<Node>("Node/Player").GetNode<Inventory>("Inventory");
+		Vector2 mousePos = GetGlobalMousePosition();
 		Vector2 playerPos = _player.GlobalPosition;
 		Vector2 direction = (mousePos - playerPos).Normalized();
 		//GD.Print($"Direction: {direction}");
@@ -57,7 +57,7 @@ public partial class GunPivot : Node2D
 		
 
 		_fireCooldown -= (float)delta;
-		if (Input.IsActionPressed("shoot") && _fireCooldown <= 0)
+		if (Input.IsActionPressed("shoot") && _fireCooldown <= 0 && isReloading == false)
 		{
 			//GD.Print($"Bullets in mag: {ammoInMag}"); //Used for debug
 			
@@ -68,17 +68,22 @@ public partial class GunPivot : Node2D
 			
 			_fireCooldown = FireRate;
 		}
-        Label magLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("MagLabel");
-        magLabel.Text = $"Mag: {ammoInMag}/30";
+		else if (_fireCooldown <= 0)
+		{
+			var oldTexture = GD.Load<Texture2D>("res://Assets/Sprites/PlayerCharacter/AK47.png");
+			_sprite.Texture = oldTexture;
+		}
+		Label magLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("MagLabel");
+		magLabel.Text = $"Mag: {ammoInMag}/30";
 
-        Label ammoLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("AmmoLabel");
-        ammoLabel.Text = $"Ammo: {Inv.ammo}";
-    }
+		Label ammoLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("AmmoLabel");
+		ammoLabel.Text = $"Ammo: {Inv.ammo}";
+	}
 	bool isReloading = false;
-    private async void Reload()
+	private async void Reload()
 	{
-        var Inv = GetTree().Root.GetNode<Node>("Node/Player").GetNode<Inventory>("Inventory");
-        if (isReloading == false)
+		var Inv = GetTree().Root.GetNode<Node>("Node/Player").GetNode<Inventory>("Inventory");
+		if (isReloading == false)
 		{
 			if (Inv.ammo != 0)
 			{
@@ -106,18 +111,23 @@ public partial class GunPivot : Node2D
 			{
 				GD.Print("No Ammo Left!");
 			}
-            
-        }
-    }
-    
+			
+		}
+	}
+	
 
-    private void Shoot(Vector2 direction) //Called when shoot input (Left click) is triggered
+	private void Shoot(Vector2 direction) //Called when shoot input (Left click) is triggered
 	{
 		ammoInMag--; //Removing a bullet from mag
 		if (BulletScene == null) //Just checking if Bullet scene is attached
 		{
 			GD.PrintErr("BulletScene not assigned!");
 			return;
+		}
+		if(isReloading == false)
+		{
+		var newTexture = GD.Load<Texture2D>("res://Assets/Sprites/PlayerCharacter/AK47Firing.png");
+		_sprite.Texture = newTexture;
 		}
 		
 		Bullet bullet = (Bullet)BulletScene.Instantiate();

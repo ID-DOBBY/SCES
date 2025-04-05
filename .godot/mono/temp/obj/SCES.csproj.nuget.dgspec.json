@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\SCES.csproj": {}
+    "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\SCES.csproj": {
+    "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\SCES.csproj",
+        "projectUniqueName": "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj",
         "projectName": "SCES",
-        "projectPath": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\SCES.csproj",
-        "packagesPath": "C:\\Users\\lucac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucac\\Documents\\SCECSPROJECT\\SCES\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj",
+        "packagesPath": "C:\\Users\\Luca\\.nuget\\packages\\",
+        "outputPath": "E:\\Doc\\SCESPROJECT\\SCES\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lucac\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -78,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

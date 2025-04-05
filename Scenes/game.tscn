@@ -16,7 +16,7 @@ tile_map_data = PackedByteArray("AAABAAEAAAAAAAAAAAABAAIAAAAAAAAAAAABAAMAAAAAAAA
 [node name="Player" parent="." instance=ExtResource("2_wrm1d")]
 
 [node name="Zombie" parent="." instance=ExtResource("3_wrm1d")]
-position = Vector2(1294, 682)
+position = Vector2(1351, 640)
 
 [node name="Zombie2" parent="." instance=ExtResource("3_wrm1d")]
 position = Vector2(1575, 465)
@@ -25,19 +25,19 @@ position = Vector2(1575, 465)
 position = Vector2(1537, 146)
 
 [node name="Zombie4" parent="." instance=ExtResource("3_wrm1d")]
-position = Vector2(1220, 0)
+position = Vector2(1251, 0)
 
 [node name="Zombie5" parent="." instance=ExtResource("3_wrm1d")]
 position = Vector2(1035, 1065)
 
 [node name="Zombie6" parent="." instance=ExtResource("3_wrm1d")]
-position = Vector2(1321, 995)
+position = Vector2(1371, 920)
 
 [node name="Zombie7" parent="." instance=ExtResource("3_wrm1d")]
 position = Vector2(1555, 811)
 
 [node name="Zombie8" parent="." instance=ExtResource("3_wrm1d")]
-position = Vector2(1299, 341)
+position = Vector2(1377, 358)
 
 [node name="Rock_Node2" parent="." instance=ExtResource("5_wowpa")]
 position = Vector2(590, -167)

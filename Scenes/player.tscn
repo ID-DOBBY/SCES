@@ -9,8 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dwlg06ja08dch" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe1.png" id="7_fxof2"]
 [ext_resource type="Texture2D" uid="uid://cc8276jnfese4" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe2.png" id="8_601d1"]
 [ext_resource type="Script" uid="uid://bxm1il7yoxmpy" path="res://Scripts/GunPivot.cs" id="9_tx1dd"]
-[ext_resource type="Texture2D" uid="uid://ba2lkwdio5myd" path="res://Assets/Sprites/PlayerCharacter/AK.png" id="10_gymyn"]
 [ext_resource type="PackedScene" uid="uid://o76ugyp574jk" path="res://Scenes/bullet.tscn" id="10_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://b3vqdubywduy" path="res://Assets/Sprites/PlayerCharacter/AK47.png" id="11_pu2lt"]
 [ext_resource type="Script" uid="uid://bllcpwu4778t0" path="res://Scripts/Inventory.cs" id="12_pu2lt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
@@ -80,16 +80,18 @@ frame_progress = 0.182148
 
 [node name="GunPivot" type="Node2D" parent="."]
 position = Vector2(0, -0.5)
+scale = Vector2(0.995274, 0.980092)
 script = ExtResource("9_tx1dd")
-Distance = -10.0
+Distance = -16.0
+RotationSpeed = 14.0
 BulletScene = ExtResource("10_pu2lt")
 FireRate = 0.15
 bulletDistanceFromPivot = 200.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GunPivot"]
 position = Vector2(68.5, 1)
-scale = Vector2(2, 2)
-texture = ExtResource("10_gymyn")
+texture = ExtResource("11_pu2lt")
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("12_pu2lt")
+ammo = 100
