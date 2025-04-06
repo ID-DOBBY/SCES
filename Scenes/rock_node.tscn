@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bstcvfc66pojm" path="res://Assets/Sprites/Environment/Rock Pile 3 - WHITE - small.PNG" id="1_fwjll"]
 
 [node name="Rock_Node" type="StaticBody2D"]
+visibility_layer = 4
 scale = Vector2(3, 3)
 script = ExtResource("1_2egk0")
 

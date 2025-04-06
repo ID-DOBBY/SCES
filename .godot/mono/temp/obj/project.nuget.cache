@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "9VuF2/5LHP0=",
+  "dgSpecHash": "PSthtDAHxrg=",
   "success": true,
-  "projectFilePath": "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj",
+  "projectFilePath": "C:\\Users\\debon\\Documents\\sces\\SCES.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Luca\\.nuget\\packages\\godot.sourcegenerators\\4.4.0\\godot.sourcegenerators.4.4.0.nupkg.sha512",
-    "C:\\Users\\Luca\\.nuget\\packages\\godotsharp\\4.4.0\\godotsharp.4.4.0.nupkg.sha512",
-    "C:\\Users\\Luca\\.nuget\\packages\\godotsharpeditor\\4.4.0\\godotsharpeditor.4.4.0.nupkg.sha512"
+    "C:\\Users\\debon\\.nuget\\packages\\godot.sourcegenerators\\4.4.0\\godot.sourcegenerators.4.4.0.nupkg.sha512",
+    "C:\\Users\\debon\\.nuget\\packages\\godotsharp\\4.4.0\\godotsharp.4.4.0.nupkg.sha512",
+    "C:\\Users\\debon\\.nuget\\packages\\godotsharpeditor\\4.4.0\\godotsharpeditor.4.4.0.nupkg.sha512",
+    "C:\\Users\\debon\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.14\\microsoft.netcore.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\debon\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.14\\microsoft.windowsdesktop.app.ref.8.0.14.nupkg.sha512",
+    "C:\\Users\\debon\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.14\\microsoft.aspnetcore.app.ref.8.0.14.nupkg.sha512"
   ],
   "logs": []
 }

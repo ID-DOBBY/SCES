@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj": {}
+    "C:\\Users\\debon\\Documents\\sces\\SCES.csproj": {}
   },
   "projects": {
-    "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj": {
+    "C:\\Users\\debon\\Documents\\sces\\SCES.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj",
+        "projectUniqueName": "C:\\Users\\debon\\Documents\\sces\\SCES.csproj",
         "projectName": "SCES",
-        "projectPath": "E:\\Doc\\SCESPROJECT\\SCES\\SCES.csproj",
-        "packagesPath": "C:\\Users\\Luca\\.nuget\\packages\\",
-        "outputPath": "E:\\Doc\\SCESPROJECT\\SCES\\.godot\\mono\\temp\\obj\\",
+        "projectPath": "C:\\Users\\debon\\Documents\\sces\\SCES.csproj",
+        "packagesPath": "C:\\Users\\debon\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\debon\\Documents\\sces\\.godot\\mono\\temp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Luca\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\debon\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,7 +37,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -69,12 +68,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.14, 8.0.14]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
