@@ -1,20 +1,31 @@
-[gd_scene load_steps=7 format=4 uid="uid://derdiedi1njt1"]
+[gd_scene load_steps=9 format=4 uid="uid://derdiedi1njt1"]
 
-[ext_resource type="Texture2D" uid="uid://bwyq7i2j4kpj7" path="res://Assets/TileSets/Placeholder_grasstile.png" id="1_ci6au"]
+[ext_resource type="Texture2D" uid="uid://bcfxpcv101me1" path="res://Assets/TileSets/Grass-Flowers.png" id="1_myvm1"]
 [ext_resource type="Script" uid="uid://b4sqmk6b62hvq" path="res://Scripts/Map.cs" id="2_26yhd"]
-[ext_resource type="Texture2D" uid="uid://2800nwv3qlle" path="res://Assets/TileSets/Placeholder_stonetile.png" id="2_p3ir5"]
+[ext_resource type="Texture2D" uid="uid://d15qjswc230vv" path="res://Assets/TileSets/Gravel-Base.png" id="2_q0mm3"]
+[ext_resource type="Texture2D" uid="uid://d1bkgcv5b2waw" path="res://Assets/TileSets/Stone-Base.png" id="3_np2xp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3ir5"]
-texture = ExtResource("1_ci6au")
+texture = ExtResource("1_myvm1")
 0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_myvm1"]
-texture = ExtResource("2_p3ir5")
+texture = ExtResource("2_q0mm3")
 0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7jjh"]
+texture = ExtResource("3_np2xp")
 
 [sub_resource type="TileSet" id="TileSet_q0mm3"]
 sources/0 = SubResource("TileSetAtlasSource_p3ir5")
 sources/1 = SubResource("TileSetAtlasSource_myvm1")
+sources/2 = SubResource("TileSetAtlasSource_w7jjh")
 
 [node name="TileMapLayer" type="TileMapLayer"]
 texture_filter = 1

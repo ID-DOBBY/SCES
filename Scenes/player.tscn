@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cc8276jnfese4" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude_upframe2.png" id="8_601d1"]
 [ext_resource type="Script" uid="uid://bxm1il7yoxmpy" path="res://Scripts/GunPivot.cs" id="9_tx1dd"]
 [ext_resource type="PackedScene" uid="uid://o76ugyp574jk" path="res://Scenes/bullet.tscn" id="10_pu2lt"]
-[ext_resource type="Texture2D" uid="uid://b3vqdubywduy" path="res://Assets/Sprites/PlayerCharacter/AK47.png" id="11_pu2lt"]
+[ext_resource type="Texture2D" uid="uid://c3elo25w6t7ch" path="res://Assets/Sprites/PlayerCharacter/AK-Base.png" id="12_7dp3o"]
 [ext_resource type="Script" uid="uid://bllcpwu4778t0" path="res://Scripts/Inventory.cs" id="12_pu2lt"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
@@ -57,6 +57,7 @@ animations = [{
 }]
 
 [node name="Player" type="CharacterBody2D"]
+visibility_layer = 8
 position = Vector2(967, 463)
 scale = Vector2(2, 2)
 script = ExtResource("1_88kja")
@@ -73,10 +74,9 @@ script = ExtResource("3_it8n0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -0.5)
-scale = Vector2(5, 5)
+scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_601d1")
-animation = &"WalkingUp"
-frame_progress = 0.182148
+animation = &"Idle"
 
 [node name="GunPivot" type="Node2D" parent="."]
 position = Vector2(0, -0.5)
@@ -89,8 +89,9 @@ FireRate = 0.15
 bulletDistanceFromPivot = 200.0
 
 [node name="Sprite2D" type="Sprite2D" parent="GunPivot"]
-position = Vector2(68.5, 1)
-texture = ExtResource("11_pu2lt")
+position = Vector2(56.7683, 1.02032)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("12_7dp3o")
 
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("12_pu2lt")

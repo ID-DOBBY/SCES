@@ -7,6 +7,7 @@
 size = Vector2(14, 8)
 
 [node name="Bullet" type="Area2D"]
+visibility_layer = 8
 collision_layer = 3
 script = ExtResource("1_oduel")
 Speed = 1400.0

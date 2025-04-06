@@ -38,6 +38,7 @@ animations = [{
 size = Vector2(132, 210)
 
 [node name="Zombie" type="CharacterBody2D"]
+visibility_layer = 8
 script = ExtResource("1_w2xga")
 hitCooldown = 1500.0
 DetectionRadius = 800.0
