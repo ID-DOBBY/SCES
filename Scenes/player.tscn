@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://31onwrq5hswc"]
+[gd_scene load_steps=16 format=3 uid="uid://31onwrq5hswc"]
 
 [ext_resource type="Script" uid="uid://dp8ifwbftb7vk" path="res://Scripts/Player.cs" id="1_88kja"]
 [ext_resource type="Texture2D" uid="uid://bij8au7c5t53r" path="res://Assets/Sprites/PlayerCharacter/Placeholder_dude.png" id="1_ymxaj"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://o76ugyp574jk" path="res://Scenes/bullet.tscn" id="10_pu2lt"]
 [ext_resource type="Texture2D" uid="uid://c3elo25w6t7ch" path="res://Assets/Sprites/PlayerCharacter/AK-Base.png" id="12_7dp3o"]
 [ext_resource type="Script" uid="uid://bllcpwu4778t0" path="res://Scripts/Inventory.cs" id="12_pu2lt"]
+[ext_resource type="PackedScene" uid="uid://drb1cistk5xid" path="res://Scenes/build_mode.tscn" id="13_ukyrk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_88kja"]
 radius = 22.0
@@ -63,6 +64,10 @@ scale = Vector2(2, 2)
 script = ExtResource("1_88kja")
 aspeed = 10.0
 
+[node name="Build_Mode" parent="." instance=ExtResource("13_ukyrk")]
+visible = true
+visibility_layer = 16
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
 position = Vector2(-2, -12.5)
@@ -70,6 +75,7 @@ shape = SubResource("CapsuleShape2D_88kja")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(0, -2.5)
+zoom = Vector2(2, 2)
 script = ExtResource("3_it8n0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

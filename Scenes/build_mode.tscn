@@ -143,6 +143,7 @@ texture = ExtResource("2_wum63")
 sources/0 = SubResource("TileSetAtlasSource_bsiby")
 
 [node name="Build_Mode" type="Node2D"]
+visible = false
 script = ExtResource("1_bsiby")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -153,3 +154,13 @@ position = Vector2(-419, 102)
 
 [node name="Dropped_Stone2" parent="." instance=ExtResource("3_wum63")]
 position = Vector2(-407, 462)
+
+[node name="Label" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 910.0
+offset_right = 1010.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "BUILD MODE"
