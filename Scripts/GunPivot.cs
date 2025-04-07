@@ -29,11 +29,11 @@ public partial class GunPivot : Node2D
 			GD.PrintErr("BulletContainer node not found! Bullets will be added to the current scene.");
 		}
 	}
-	
-	
+
+
 	public override void _Process(double delta)
 	{
-		
+
 		if (_player == null) return;
 
 		var Inv = GetTree().Root.GetNode<Node>("Node/Player").GetNode<Inventory>("Inventory");
@@ -41,9 +41,9 @@ public partial class GunPivot : Node2D
 		Vector2 playerPos = _player.GlobalPosition;
 		Vector2 direction = (mousePos - playerPos).Normalized();
 		//GD.Print($"Direction: {direction}");
-		
+
 		Position = direction * Distance;
-		if(direction.X < 0) //Checking which way the gun is facing so the sprite is not upside down
+		if (direction.X < 0) //Checking which way the gun is facing so the sprite is not upside down
 		{
 			_sprite.FlipV = true;
 		}
@@ -51,17 +51,23 @@ public partial class GunPivot : Node2D
 		{
 			_sprite.FlipV = false;
 		}
-		
+
 		float targetRotation = direction.Angle();
 		Rotation = Mathf.LerpAngle(Rotation, targetRotation, (float)delta * RotationSpeed);
-		
+		if(Input.IsActionPressed("reload"))
+		{
+			if (ammoInMag != magSize)
+			{
+				Reload();
+			}
+        }
 
 		_fireCooldown -= (float)delta;
 		if (Input.IsActionPressed("shoot") && _fireCooldown <= 0 && isReloading == false)
 		{
 			//GD.Print($"Bullets in mag: {ammoInMag}"); //Used for debug
 			
-			if(ammoInMag > 0) //Checking if gun needs to be reloaded
+			if(ammoInMag > 0 || isReloading == true) //Checking if gun needs to be reloaded or is currently being reloaded
 			Shoot(direction);
 			else
 			Reload();
@@ -78,7 +84,17 @@ public partial class GunPivot : Node2D
 
 		Label ammoLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("AmmoLabel");
 		ammoLabel.Text = $"Ammo: {Inv.ammo}";
-	}
+
+        Label reloadingLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("ReloadingLabel");
+        if (isReloading == true)
+		{
+			reloadingLabel.Text = "Reloading!";
+		}
+		else
+		{
+            reloadingLabel.Text = "";
+        }
+    }
 	bool isReloading = false;
 	private async void Reload()
 	{
@@ -93,18 +109,34 @@ public partial class GunPivot : Node2D
 					isReloading = true;
 					GD.Print("Reloading!");
 					await ToSignal(GetTree().CreateTimer(reloadTime), "timeout");
-					ammoInMag = magSize;
-					Inv.ammo -= magSize;
+					if (ammoInMag != 0)
+					{
+						Inv.ammo = Inv.ammo - (magSize - ammoInMag);
+                        ammoInMag = magSize;
+					}
+					else
+					{
+						ammoInMag = magSize;
+						Inv.ammo -= magSize;
+					}
 					isReloading = false;
 				}
-				else if (Inv.ammo < 30 && Inv.ammo > 0)
+				else if (Inv.ammo < 30 && Inv.ammo > 0 && (Inv.ammo+ammoInMag) < 30)
 				{
 					isReloading = true;
 					GD.Print("Reloading with whats left!");
 					await ToSignal(GetTree().CreateTimer(reloadTime), "timeout");
+					if (ammoInMag != 0)
+					{
+                        ammoInMag = ammoInMag + Inv.ammo;
+                        Inv.ammo = 0;
+					}
+					else
+					{
 					ammoInMag = Inv.ammo;
 					Inv.ammo = 0;
-					isReloading = false;
+                    }
+                    isReloading = false;
 				}
 			}
 			else
