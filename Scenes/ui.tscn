@@ -31,4 +31,14 @@ offset_left = 1540.0
 offset_top = 83.0
 offset_right = 1586.0
 offset_bottom = 106.0
-text = "Stone "
+theme_override_font_sizes/font_size = 55
+text = "Stone: 0"
+
+[node name="ReloadingLabel" type="Label" parent="."]
+offset_left = 1537.0
+offset_top = 703.0
+offset_right = 1750.0
+offset_bottom = 858.0
+theme_override_font_sizes/font_size = 55
+text = "
+"
