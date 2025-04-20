@@ -20,16 +20,15 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("Build_mode"):
-		print("Build Pressed")
-		is_on = !is_on
-		self.visible = is_on
-		print(self.visible)
 	pass # No per-frame logic required
 
 # Handles user input events
 func _input(event: InputEvent) -> void:
-	
+	if Input.is_key_pressed(KEY_Q):
+		print("Build Pressed")
+		is_on = !is_on
+		self.visible = is_on
+		print(self.visible)
 	# Check if the event is a mouse button press
 	if event is InputEventMouseButton and is_on == true:
 		# Check if the left mouse button was pressed

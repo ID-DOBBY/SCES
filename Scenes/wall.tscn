@@ -16,7 +16,7 @@ metadata/_custom_type_script = "uid://clphmkxsf42in"
 size = Vector2(12, 16)
 
 [node name="Wall" type="StaticBody2D"]
-scale = Vector2(5, 5)
+scale = Vector2(1.5, 2)
 script = ExtResource("1_m8ojb")
 data = SubResource("Resource_g4b4r")
 

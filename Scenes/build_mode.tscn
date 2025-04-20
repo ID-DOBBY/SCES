@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://drb1cistk5xid"]
+[gd_scene load_steps=5 format=3 uid="uid://drb1cistk5xid"]
 
 [ext_resource type="Script" uid="uid://do4m4ingjgune" path="res://Scripts/build_mode.gd" id="1_bsiby"]
 [ext_resource type="Texture2D" uid="uid://cs7rhlxmcw72l" path="res://Assets/TileSets/tilemap_packed.png" id="2_wum63"]
-[ext_resource type="PackedScene" uid="uid://cxwf16fnductx" path="res://Scenes/dropped_stone.tscn" id="3_wum63"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bsiby"]
 texture = ExtResource("2_wum63")
@@ -140,6 +139,7 @@ texture = ExtResource("2_wum63")
 11:10/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wum63"]
+tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_bsiby")
 
 [node name="Build_Mode" type="Node2D"]
@@ -149,18 +149,12 @@ script = ExtResource("1_bsiby")
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_set = SubResource("TileSet_wum63")
 
-[node name="Dropped_Stone" parent="." instance=ExtResource("3_wum63")]
-position = Vector2(-419, 102)
-
-[node name="Dropped_Stone2" parent="." instance=ExtResource("3_wum63")]
-position = Vector2(-407, 462)
-
 [node name="Label" type="Label" parent="."]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 910.0
-offset_right = 1010.0
+offset_left = -50.0
+offset_right = 50.0
 offset_bottom = 23.0
 grow_horizontal = 2
 text = "BUILD MODE"

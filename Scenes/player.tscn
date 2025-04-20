@@ -55,6 +55,11 @@ animations = [{
 "loop": true,
 "name": &"WalkingUp",
 "speed": 3.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -63,10 +68,6 @@ position = Vector2(967, 463)
 scale = Vector2(2, 2)
 script = ExtResource("1_88kja")
 aspeed = 10.0
-
-[node name="Build_Mode" parent="." instance=ExtResource("13_ukyrk")]
-visible = true
-visibility_layer = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 visible = false
@@ -82,7 +83,7 @@ script = ExtResource("3_it8n0")
 position = Vector2(0, -0.5)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_601d1")
-animation = &"Idle"
+animation = &"new_animation"
 
 [node name="GunPivot" type="Node2D" parent="."]
 position = Vector2(0, -0.5)
@@ -102,3 +103,8 @@ texture = ExtResource("12_7dp3o")
 [node name="Inventory" type="Node" parent="."]
 script = ExtResource("12_pu2lt")
 ammo = 100
+
+[node name="Build_Mode" parent="." instance=ExtResource("13_ukyrk")]
+visible = true
+visibility_layer = 16
+position = Vector2(0, -141.5)
