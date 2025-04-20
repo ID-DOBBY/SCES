@@ -5,10 +5,11 @@ extends Node2D
 
 # Stores the cell position where a wall will be placed
 var cell_pos
+@onready var player:CharacterBody2D = self.get_parent()
 @onready var label: Label = $Label
-
+@onready var inventory: Node = player.get_node("Inventory")
 var is_on:bool = false
-
+var stone:int
 # Preload the wall scene to instantiate it when needed
 const WALL = preload("res://Scenes/wall.tscn")
 
@@ -24,16 +25,19 @@ func _process(delta: float) -> void:
 
 # Handles user input events
 func _input(event: InputEvent) -> void:
+	stone = inventory.stone
 	if Input.is_key_pressed(KEY_Q):
 		print("Build Pressed")
 		is_on = !is_on
 		self.visible = is_on
 		print(self.visible)
 	# Check if the event is a mouse button press
-	if event is InputEventMouseButton and is_on == true:
+	if event is InputEventMouseButton and is_on == true and stone > 0:
 		# Check if the left mouse button was pressed
-		if event.button_index == MOUSE_BUTTON_LEFT:
+		if event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed():
 			# Convert the global mouse position to a tile map position and place a wall there
+			inventory.stone -= 1
+			player.UpdateStone(inventory.stone)
 			place(tile_map.local_to_map(get_global_mouse_position()))
 
 # Function to place a wall at a given tilemap position
