@@ -305,4 +305,11 @@ public partial class Player : CharacterBody2D
 		Label healthLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("HealthLabel");
 		healthLabel.Text = $"Health: {health}";
 	}
+	
+	public void UpdateStone(int newVal)
+	{
+		Label stoneLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("StoneLabel");
+		stoneLabel.Text = $"Stone: {newVal}";
+	}
+	
 }

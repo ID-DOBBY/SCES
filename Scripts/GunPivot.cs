@@ -60,7 +60,7 @@ public partial class GunPivot : Node2D
 			{
 				Reload();
 			}
-        }
+		}
 
 		_fireCooldown -= (float)delta;
 		if (Input.IsActionPressed("shoot") && _fireCooldown <= 0 && isReloading == false)
@@ -85,16 +85,16 @@ public partial class GunPivot : Node2D
 		Label ammoLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("AmmoLabel");
 		ammoLabel.Text = $"Ammo: {Inv.ammo}";
 
-        Label reloadingLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("ReloadingLabel");
-        if (isReloading == true)
+		Label reloadingLabel = GetTree().Root.GetNode<CanvasLayer>("Node/UI").GetNode<Label>("ReloadingLabel");
+		if (isReloading == true)
 		{
 			reloadingLabel.Text = "Reloading!";
 		}
 		else
 		{
-            reloadingLabel.Text = "";
-        }
-    }
+			reloadingLabel.Text = "";
+		}
+	}
 	bool isReloading = false;
 	private async void Reload()
 	{
@@ -112,7 +112,7 @@ public partial class GunPivot : Node2D
 					if (ammoInMag != 0)
 					{
 						Inv.ammo = Inv.ammo - (magSize - ammoInMag);
-                        ammoInMag = magSize;
+						ammoInMag = magSize;
 					}
 					else
 					{
@@ -128,15 +128,15 @@ public partial class GunPivot : Node2D
 					await ToSignal(GetTree().CreateTimer(reloadTime), "timeout");
 					if (ammoInMag != 0)
 					{
-                        ammoInMag = ammoInMag + Inv.ammo;
-                        Inv.ammo = 0;
+						ammoInMag = ammoInMag + Inv.ammo;
+						Inv.ammo = 0;
 					}
 					else
 					{
 					ammoInMag = Inv.ammo;
 					Inv.ammo = 0;
-                    }
-                    isReloading = false;
+					}
+					isReloading = false;
 				}
 			}
 			else
