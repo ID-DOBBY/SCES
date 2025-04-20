@@ -143,7 +143,6 @@ tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_bsiby")
 
 [node name="Build_Mode" type="Node2D"]
-visible = false
 script = ExtResource("1_bsiby")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
